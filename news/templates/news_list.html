@@ -1,0 +1,16 @@
+<!-- news/templates/news/post_list.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Latest News{% endblock %}
+
+{% block content %}
+    <h1>Latest News</h1>
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <p>Author: {{ post.author.username }} | Published on: {{ post.pub_date }}</p>
+            <a href="{% url 'news_detail' pk=post.pk %}">View Post</a>        </div>
+    {% endfor %}
+{% endblock %}
