@@ -46,25 +46,10 @@
             </div>
         </nav>
 
-        <header>
-            <div class="container hero-text">
-                <div class="position-absolute top-50 start-50 translate-middle text-center">
-                    <h1 class="text-shadow">
-                        INTERESTING
-                    </h1>
-                    <p class="text-shadow"> tell me more.</p>
+        {% block content %}
 
-                </div>
-                <div class="arrow text-center text-shadow">
 
-                    <i class="fa-solid fa-angles-down fa-bounce"></i>
-
-                </div>
-            </div>
-        </header>
-    
-    <main>
-        {% block content %}{% endblock %}
+        {% endblock %}
     </main>
     
 

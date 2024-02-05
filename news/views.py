@@ -18,8 +18,8 @@ def news_list(request):
 #    return render(request, 'post_detail.html', {'post': post})
 
 
-def news_details(request, post_id):
-    post = get_object_or_404(News_Post, pk=post_id)
+def news_details(request, slug):
+    post = get_object_or_404(News_Post, slug=slug)
     comments = post.comments.all()
 
     if request.method == 'POST':
@@ -45,19 +45,19 @@ def news_details(request, post_id):
 
 @require_POST
 def vote(request):
-    post_id = request.POST.get('post_id')
-    post = Post.objects.get(pk=post_id)
+    post_slug = request.POST.get('slug')  # Retrieve the slug from POST data
+    post = get_object_or_404(News_Post, slug=post_slug)  # Use slug to get the post
 
     # Increment the post's vote count and save it
     post.votes += 1
     post.save()
 
     # Return a JSON response confirming the vote
-    return JsonResponse({'message': 'Vote added successfully'})
+    return JsonResponse({'votes': post.votes})
 
 
 def top_posts(request):
-    top_posts = Post.objects.order_by('-votes')
+    top_posts = News_Post.objects.order_by('-votes')
     return render(request, 'top_posts.html', {'top_posts': top_posts})
 
 

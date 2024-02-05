@@ -4,28 +4,22 @@
 
 {% block content %}
 
-<header>
-    <div class="container hero-text">
-        <div class="position-absolute top-50 start-50 translate-middle text-center">
+<header class="header-top">
+    <div class="container">
+        <div class="col-12 p-5 hero-text-top mx-auto">
             <h1 class="text-shadow">
-                INTERESTING
+                TOP INTERESTING
             </h1>
-            <p class="text-shadow"> tell me more.</p>
-
-        </div>
-        <div class="arrow text-center text-shadow">
-
-            <i class="fa-solid fa-angles-down fa-bounce"></i>
-
+            <p class="text-shadow">voted by you.</p>
         </div>
     </div>
 </header>
 
 <main>
 
-<div class="container">
+<div class="container"> 
     <div class="row">
-        {% for post in posts %}
+        {% for post in top_posts %}
         <div class="p-5 col-lg-10 col-md-12 mx-auto content-container">
             <div class="row">
                 <div class="col-lg-9 col-md-12">
@@ -66,6 +60,7 @@
         {% endfor %}
     </div>
 </div>
+
 
 {% endblock %}
 

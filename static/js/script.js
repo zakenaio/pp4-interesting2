@@ -1,15 +1,20 @@
 $(document).ready(function () {
     // JavaScript code for handling vote registration and displaying popup
     $('.vote-icon').on('click', function () {
-        var postId = $(this).data('post-id');
-        // Make an AJAX request to increment the vote count for the post with ID postId
+        var postSlug = $(this).data('post-slug');
+        var $this = $(this); // Store the clicked element for use in the callback
+    
         $.ajax({
             url: '/vote/',
             method: 'POST',
-            data: { post_id: postId },
+            data: {
+                'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val(),
+                'slug': postSlug,
+            },
             success: function (response) {
-                // Display a popup message to confirm the successful vote registration
-                alert('Thanks for your vote!');
+                // Assuming the element that displays the vote count has a class 'vote-count'
+                // and is a sibling of the clicked '.vote-icon'
+                $this.siblings('.vote-count').text(response.votes);
             },
             error: function (xhr, status, error) {
                 // Handle any errors
