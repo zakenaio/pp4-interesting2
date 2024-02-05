@@ -1,7 +1,11 @@
 from django.urls import path
-from .views import news_list, news_detail  # Ensure post_detail is imported
+from . import views
+from .views import news_list, news_details, top_posts
+
 
 urlpatterns = [
     path('', news_list, name='news_list'),
-    path('news/<int:pk>/', news_detail, name='news_detail'),  # Add this line
+    path('news-details/<int:pk>/', views.news_details, name='news_details'),
+    path('top-posts/', views.top_posts, name='top_posts'),
+    path('vote/', views.vote, name='vote'),
 ]
