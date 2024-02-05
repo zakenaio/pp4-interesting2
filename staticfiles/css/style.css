@@ -17,7 +17,6 @@ img {
     -o-border-radius: 20px;
 }
 
-
 /* NAV */
 .navbar {
     background-color: transparent;
@@ -44,7 +43,7 @@ header {
 
 /* HEADER TOP */
 .header-top {
-    height: 35vh;
+    height: 20vh;
     background-image: url(https://images.pexels.com/photos/4906419/pexels-photo-4906419.jpeg);
     background-attachment: fixed;
     background-size: cover;
@@ -52,14 +51,14 @@ header {
 
 /* HEADER POST DETAILS */
 .header-post {
-    height: 35vh;
+    height: 20vh;
     background-image: url(https://images.pexels.com/photos/4906419/pexels-photo-4906419.jpeg);
     background-attachment: fixed;
     background-size: cover;
 }
 
-.post-header {
-    margin-top: 10vw;
+.news-header {
+    margin-top: 15vh;
     color: #f3f3f3;
     font-size: 4em;
 }

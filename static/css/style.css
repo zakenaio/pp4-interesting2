@@ -17,7 +17,6 @@ img {
     -o-border-radius: 20px;
 }
 
-
 /* NAV */
 .navbar {
     background-color: transparent;
@@ -58,10 +57,11 @@ header {
     background-size: cover;
 }
 
-.post-header {
-    margin-top: 10vw;
+.news-header {
+    margin-top: 15vh;
     color: #f3f3f3;
     font-size: 4em;
+    z-index: 99;
 }
 
 /* COLORS - SIZES */ 
@@ -98,17 +98,23 @@ h3 a {
     -o-border-radius: 20px;
 }
 
-/* COLORS HERO BASE */
-.hero-text h1 {
-    margin-top: -35%;
-    font-size: 10vw;
+/* COLORS AND ALIGN HERO BASE */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     color: #f3f3f3;
+}
+
+.hero-text h1 {
+    font-size: 10vw;
 }
 
 .hero-text p {
     margin-top: -5%;
     font-size: 5vw;
-    color: #f3f3f3;
 }
 
 /* AUTHOR */
@@ -120,28 +126,56 @@ h3 a {
 }
 
 .auth-tag {
+    text-transform: uppercase;
     color: #636363;
-    font-size: 0.8em;
-    margin-top: -5px;
-}
-
-.auth-tag-d {
-    text-align: end;
-    color: #636363;
-    font-size: 0.8em;
+    font-size: 0.7em;
+    margin-top: -8px;
 }
 
 .auth-details {
     text-transform: uppercase;
     color: #636363;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin-top: 5px;
+}
+
+.auth-tag-d {
+    text-transform: uppercase;
+    text-align: end;
+    color: #636363;
+    font-size: 0.7em;
 }
 
 .auth-tag-details {
     text-transform: uppercase;
+    margin-top: -8px;
+}
+
+.auth-div {
+    height: 60px;
+}
+
+/* AUTHOR IMAGES */
+.profile-image-div {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.profile-image-details {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 0;
 }
 
 /* COLORS CATEGORIES */
@@ -385,30 +419,15 @@ footer i {
     color: #f3f3f3;
     font-size: 6em;
     position: absolute;
+    bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 91vh;
+    transform: translateX(-50%) translateY(50%);
+    -webkit-transform: translateX(-50%) translateY(50%);
+    -moz-transform: translateX(-50%) translateY(50%);
+    -ms-transform: translateX(-50%) translateY(50%);
+    -o-transform: translateX(-50%) translateY(50%);
 }
 
-.profile-image-div {
-    width: 60px;
-}
-
-.profile-image-det-div {
-    width: 100px;
-}
-
-.profile-image {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-
-.profile-image-details {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-}
 
 .flex-end {
     display: flex;
