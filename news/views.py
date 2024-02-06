@@ -4,18 +4,13 @@ from django.shortcuts import render, get_object_or_404
 from .models import News_Post
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from .forms import CommentForm
 
 def news_list(request):
-    posts = News_Post.objects.all()
+    posts = News_Post.objects.order_by('-pub_date')
     return render(request, 'news_list.html', {'posts': posts})
-
-#def news_detail(request, pk):
-#    post = get_object_or_404(News_Post, pk=pk)
-#    return render(request, 'post_detail.html', {'post': post})
 
 
 def news_details(request, slug):
