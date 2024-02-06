@@ -438,6 +438,10 @@ footer i {
     -o-transform: translateX(-50%) translateY(50%);
 }
 
+/* 404 */
+.not-found-icon {
+    font-size: 50vh;
+}
 
 .flex-end {
     display: flex;
