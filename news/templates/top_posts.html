@@ -8,8 +8,11 @@
     <div class="container">
         <div class="col-10 hero-text-top mx-auto text-center">
             <h1 class="text-shadow">
-                TOP INTERESTING
+                POPULAR NEWS
             </h1>
+            <p class="text-shadow">
+                as voted by you.
+            </p>
         </div>
     </div>
 </header>
@@ -39,7 +42,7 @@
                 <div class="content">
                     <p>
                         {{ post.content | safe }}
-                    </p><!-- Post content and image -->
+                    </p>
                 </div>
             </div>
             <div class="row post-footer">
@@ -59,8 +62,4 @@
         {% endfor %}
     </div>
 </div>
-
-
 {% endblock %}
-
-
