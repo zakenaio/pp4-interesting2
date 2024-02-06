@@ -1,4 +1,4 @@
-"""intere{%  %}ing URL Configuration
+"""interesting URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -22,13 +22,6 @@ urlpatterns = [
     path('', include('news.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    #path('upload/', ckeditor_views.upload, name='ckeditor_upload'),
-    #path('accounts/profile/', profile, name='profile'),
-    #path('password-reset/', PasswordResetView.as_view(template_name='users/password_reset.html'),name='password-reset'),
-    #path('password-reset/done/', PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),name='password_reset_done'),
-    #path('password-reset-confirm/<uidb64>/<token>/', PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'),name='password_reset_confirm'),
-    #path('password-reset-complete/',PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
-
 ]
 
 if settings.DEBUG:

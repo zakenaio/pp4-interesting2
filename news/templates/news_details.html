@@ -41,7 +41,6 @@
                     <div class="col-6 category-btn">
                         <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
                     </div>
-
                     <div class="col-6 social-btn">
                         <a href="{% url 'news_details' slug=post.slug %}">
                             <span class="comment-count">{{ post.comments.count }}</span>
