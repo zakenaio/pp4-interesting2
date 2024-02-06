@@ -5,8 +5,8 @@
 {% block content %}
 <header class="header-post">
     <div class="container">
-        <div class="col-md-12 p-5 mx-auto">
-            <h1 class="news-header text-shadow">{{ post.title }}</h1>
+        <div class="col-md-10 mx-auto text-center">
+            <h1 class="hero-text-details text-shadow">{{ post.title }}</h1>
         </div>
     </div>
 
@@ -26,23 +26,23 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row auth-div">
                     <div class="profile-image-div">
                         <img src="{{ post.author.profile.avatar.url }}" class="profile-image-details"
                             alt="author's face">
                     </div>
-                    <div class="col auth-div">
+                    <div class="col">
                         <h5 class="auth-details">{{ post.author.username }}</h5>
                         <p class="auth-tag-details">{{ post.pub_date }}</p>
                     </div>
                 </div>
 
                 <div class="row post-footer">
-                    <div class="col-8 category-btn">
+                    <div class="col-6 category-btn">
                         <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
                     </div>
 
-                    <div class="col-4 social-btn">
+                    <div class="col-6 social-btn">
                         <a href="{% url 'news_details' slug=post.slug %}">
                             <span class="comment-count">{{ post.comments.count }}</span>
                             <i class="fa-solid fa-comment comment-icon"></i>

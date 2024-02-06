@@ -50,10 +50,10 @@
                 </div>
             </div>
             <div class="row post-footer">
-                <div class="col-8 category-btn">
+                <div class="col-6 category-btn">
                     <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
                 </div>
-                <div class="col-4 social-btn">
+                <div class="col-6 social-btn">
                     <a href="{% url 'news_details' slug=post.slug %}">
                         <span class="comment-count">{{ post.comments.count }}</span>
                         <i class="fa-solid fa-comment comment-icon"></i>
