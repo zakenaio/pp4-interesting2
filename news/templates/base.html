@@ -22,9 +22,8 @@
     <nav class="navbar text-shadow fixed-top dark-background navbar-dark navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="/../">interesting</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -37,10 +36,36 @@
                     </li>
                 </ul>
                 <ul class="d-flex navbar-nav">
+                    {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a href="/admin/" title="Sign In">Sign in</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == create_news %}active{% endif %}" aria-current="page"
+                            data-bs-toggle="modal" data-bs-target="#createNewsModal">Create News</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            data-bs-toggle="modal" data-bs-target="#signUpModal">">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
+                    </li>
+                    {% endif %}
+                    <!-- 
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#signInModal">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a>
+                    </li>
+
+                    -->
+
                 </ul>
             </div>
         </div>
@@ -48,75 +73,224 @@
 
     {% block content %}
     {% endblock %}
-</main>
+    </main>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
-<script src="{% static 'js/script.js' %}"></script>
+    <!-- Sign in modal -->
+    <div class="modal shadow fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signInModalLabel">Sign In</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/accounts/login/">
+                        {% csrf_token %}
+                        <p>
+                            <label for="id_login">Username:</label>
+                            <input type="text" name="login" placeholder="Username" autocomplete="username"
+                                maxlength="200" required="" id="id_login">
+                        </p>
+                        <p>
+                            <label for="id_password">Password:</label>
+                            <input type="password" name="password" placeholder="Password"
+                                autocomplete="current-password" required="" id="id_password">
+                        </p>
+                        <p>
+                            <label for="id_remember">Remember Me:</label>
+                            <input type="checkbox" name="remember" id="id_remember">
+                        </p>
+                        <h5>
+                            <span class="helptext"><a href="/accounts/password/reset/">
+                                    Forgot your password?</a></span>
+                        </h5>
+                        <br>
+                        <button type="submit" class="btn btn-outline-success">
+                            Sign In
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="raw-footer">
-                <div class="col-sm-12 col-md-6 col-xl-5 mx-auto">
-                    <div class="col-8 mx-auto">
-                        <h5>INTERESTING</h5>
-                        <p>tell me more.</p>
-                        <hr>
-                        <i class="fa-solid fa-house"></i>
-                        <p>A place for you to see your
-                            best news, the good and the
-                            bad. </p>
-                        <p>The idea is to let you, the users
-                            post the news you find interesting.
-                            and then but the magic of social
-                            media make sure you have a good
-                            time. Read something you didnt
-                            know, learn a new subject, find
-                            a new hobbie.</p>
-                        <hr>
-                        <i class="fa-solid fa-envelope"></i>
-                        <p><strong>INTE.RESTING</strong><br>
-                            Kneppingen 21<br>
-                            60332 Norrköping</p>
-                        <h6>Sweden</h6>
-                        <i class="fa-solid fa-phone"></i>
-                        <p></i>+46 0736 74 6886</p>
-                        <hr>
+    <!-- Sign up modal -->
+    <div class="modal shadow fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    {% if user.is_authenticated %}
+                    {% include "account/snippets/already_logged_in.html" %}
+                    {% else %}
+
+                    <p>
+                        Already have an account? Then please <a href="/accounts/login/">sign in</a>.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-4 text-end">
+                            <form method="post" action="/accounts/signup/">
+                                {% csrf_token %}
+                                <p>
+                                    <label for="id_username">Username:</label>
+                                </p>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="username" placeholder="Username" autocomplete="username"
+                                minlength="1" maxlength="150" required="" id="id_username">
+
+                        </div>
+                        <div class="col-4 text-end">
+                            <p>
+                                <label for="id_email">Email (optional):</label>
+                            </p>
+
+                        </div>
+                        <div class="col-8">
+                            <input type="email" name="email" placeholder="Email address" autocomplete="email"
+                                id="id_email">
+
+                        </div>
+                        <div class="col-4 text-end">
+                            <p>
+                                <label for="id_password1">Password:</label>
+                            </p>
+
+                        </div>
+                        <div class="col-8">
+                            <input type="password" name="password1" placeholder="Password" autocomplete="new-password"
+                                required="" id="id_password1" aria-autocomplete="list">
+                            <span class="helptext"></span>
+
+                        </div>
+                        <div class="col-4 text-end">
+                            <p>
+                                <label for="id_password2">Password (again):</label>
+                            </p>
+
+                        </div>
+                        <div class="col-8">
+                            <input type="password" name="password2" placeholder="Password (again)"
+                                autocomplete="new-password" required="" id="id_password2">
+
+                        </div>
                     </div>
-                    
-                    <div class="footer-social">
-                        <a href="#" target="_blank" title="facebook" rel="noopener"
-                            aria-label="Visit our Facebook page (opens in a new tab)">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="#" target="_blank" title="Twitter / X" rel="noopener"
-                            aria-label="Visit our Twitter / X page (opens in a new tab)">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" target="_blank" title="GitHub" rel="noopener"
-                            aria-label="Visit our GitHub page (opens in a new tab)">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="#" target="_blank" title="Instagram" rel="noopener"
-                            aria-label="Visit our Instagram page (opens in a new tab)">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" target="_blank" title="LinkedIn" rel="noopener"
-                            aria-label="Visit our LinkedIn page (opens in a new tab)">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
+
+                    <ul>
+                        <li>Your password can’t be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+
+                    <button type="submit" class="btn btn-outline-success">
+                        Sign Up
+                    </button>
+
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create News Modal -->
+    <div class="modal shadow fade" id="createNewsModal" tabindex="-1" aria-labelledby="createNewsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="createNewsModal">Create News</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% load account %}
+
+                    <h4>Create News</h4>
+                    <form method="post" action="{% url 'create_news' %}">
+                        {% csrf_token %}
+                        {{ news_post_form.as_p }}
+                        <button type="submit">Create Post</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="raw-footer">
+                    <div class="col-sm-12 col-md-6 col-xl-5 mx-auto">
+                        <div class="col-8 mx-auto">
+                            <h5>INTERESTING</h5>
+                            <p>tell me more.</p>
+                            <hr>
+                            <i class="fa-solid fa-house"></i>
+                            <p>A place for you to see your
+                                best news, the good and the
+                                bad. </p>
+                            <p>The idea is to let you, the users
+                                post the news you find interesting.
+                                and then but the magic of social
+                                media make sure you have a good
+                                time. Read something you didnt
+                                know, learn a new subject, find
+                                a new hobbie.</p>
+                            <hr>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p><strong>INTE.RESTING</strong><br>
+                                Kneppingen 21<br>
+                                60332 Norrköping</p>
+                            <h6>Sweden</h6>
+                            <i class="fa-solid fa-phone"></i>
+                            <p></i>+46 0736 74 6886</p>
+                            <hr>
+                        </div>
+
+                        <div class="footer-social">
+                            <a href="#" target="_blank" title="facebook" rel="noopener"
+                                aria-label="Visit our Facebook page (opens in a new tab)">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" target="_blank" title="Twitter / X" rel="noopener"
+                                aria-label="Visit our Twitter / X page (opens in a new tab)">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank" title="GitHub" rel="noopener"
+                                aria-label="Visit our GitHub page (opens in a new tab)">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank" title="Instagram" rel="noopener"
+                                aria-label="Visit our Instagram page (opens in a new tab)">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" title="LinkedIn" rel="noopener"
+                                aria-label="Visit our LinkedIn page (opens in a new tab)">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>

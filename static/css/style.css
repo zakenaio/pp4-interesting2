@@ -402,6 +402,27 @@ footer i {
     margin-bottom: 50px;
 }
 
+/* LOGIN - SIGN UP MODAL */
+.modal-content {
+    background-color: rgb(161, 161, 155);
+    color: #414237;
+}
+
+.modal-header {
+    border: 0px;
+    background-color: #919187ff;
+}
+
+.modal-content h4 {
+    font-size: 1.5em;
+    color: #f3f3f3;
+}
+
+.modal-content p {
+    font-size: 1em;
+    color: #414237;
+}
+
 /* 404 */
 .not-found i {
     font-size: 10em;

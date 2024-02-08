@@ -50,6 +50,29 @@ $(document).ready(function () {
     });
 });
 
+// Create News
+document.getElementById('createNewsForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle response data (e.g., close modal, show message)
+        console.log(data);
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+    });
+});
+
 // Function to retrieve CSRF token from cookies
 function getCookie(name) {
     var cookieValue = null;

@@ -13,6 +13,13 @@ class PostForm(forms.ModelForm):
             'content': CKEditorUploadingWidget(),
         }
 
+
+class NewsPostForm(forms.ModelForm):
+    class Meta:
+        model = News_Post
+        fields = ['title', 'author', 'content', 'category',]
+
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
