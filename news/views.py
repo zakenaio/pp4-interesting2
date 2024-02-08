@@ -8,10 +8,10 @@ from .forms import CommentForm
 from .forms import NewsPostForm
 
 
+
 def news_list(request):
-    posts = News_Post.objects.order_by('-pub_date')
-    forms = {post.slug: NewsPostForm(instance=post).as_p() for post in posts}
-    return render(request, 'news_list.html', {'posts': posts, 'forms': forms})
+    post_form_pairs = [(post, NewsPostForm(instance=post)) for post in News_Post.objects.order_by('-pub_date')]
+    return render(request, 'news_list.html', {'post_form_pairs': post_form_pairs})
 
 
 def news_details(request, slug):
