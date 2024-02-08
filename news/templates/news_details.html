@@ -36,18 +36,49 @@
                 </div>
             </div>
 
-            <div class="row post-footer">
-                <div class="col-6 category-btn">
-                    <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
+            {% if user.is_authenticated %}
+                    
+            <!-- Edit Post Modal -->
+            <div class="modal fade" id="editPostModal-{{ post.slug }}" tabindex="-1" aria-labelledby="editPostModalLabel-{{ post.slug }}" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editPostModalLabel-{{ post.slug }}">Edit Post</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- EDIT -->
+                            <form method="post" action="{% url 'edit_news' slug=post.slug %}">
+                                {% csrf_token %}
+                                {{ post_form.as_p }} 
+                                <div class="d-inline">
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form>
+                            <!-- DELETE -->
+                            <form method="post" action="{% url 'delete_news' slug=post.slug %}" class="d-inline">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 social-btn">
-                    <a href="{% url 'news_details' slug=post.slug %}">
-                        <span class="comment-count">{{ post.comments.count }}</span>
-                        <i class="fa-solid fa-comment comment-icon"></i>
-                    </a>
-                    <span class="vote-count">{{ post.votes }}</span>
-                    <i class="fa fa-heart vote-icon" data-post-slug="{{ post.slug }}"></i>
-                </div>
+            </div>
+
+        <div class="row post-footer">
+            <div class="col-6 category-btn">
+                <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
+                <button data-bs-toggle="modal" data-bs-target="#editPostModal-{{ post.slug }}" class="btn btn-primary">Edit</button>
+                {% endif %}
+            </div>
+            <div class="col-6 social-btn">
+                <a href="{% url 'news_details' slug=post.slug %}">
+                    <span class="comment-count">{{ post.comments.count }}</span>
+                    <i class="fa-solid fa-comment comment-icon"></i>
+                </a>
+                <span class="vote-count">{{ post.votes }}</span>
+                <i class="fa fa-heart vote-icon" data-post-slug="{{ post.slug }}"></i>
+            </div>
             </div>
 
             <div class="row comments-footer">

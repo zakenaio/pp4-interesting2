@@ -423,6 +423,11 @@ footer i {
     color: #414237;
 }
 
+.edit-button  {
+    margin-bottom: -40px;
+    margin-top: 10px;
+}
+
 /* 404 */
 .not-found i {
     font-size: 10em;

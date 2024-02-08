@@ -17,25 +17,31 @@ def news_list(request):
 def news_details(request, slug):
     post = get_object_or_404(News_Post, slug=slug)
     comments = post.comments.all()
+    post_form = NewsPostForm(instance=post)  # Prepopulate the form with the post's data
 
     if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.save()
-            # Redirect or render as necessary
-        else:
-            # Form is not valid, add a warning message
-            messages.warning(request, 'Please fill in all required fields.')
-            # Render the form with errors (and messages will be included in the context)
+        if 'comment' in request.POST:  # Check if the POST request is for a comment
+            comment_form = CommentForm(request.POST)
+            if comment_form.is_valid():
+                comment = comment_form.save(commit=False)
+                comment.post = post
+                comment.save()
+            else:
+                messages.warning(request, 'Please fill in all required fields.')
+        elif 'post' in request.POST:  # Check if the POST request is for a post edit
+            post_form = NewsPostForm(request.POST, instance=post)
+            if post_form.is_valid():
+                post_form.save()
+                return redirect('news_details', slug=slug)  # Redirect to the updated post
+
     else:
-        form = CommentForm()
+        comment_form = CommentForm()  # For a GET request, provide an empty comment form
 
     return render(request, 'news_details.html', {
         'post': post,
         'comments': comments,
-        'form': form,
+        'comment_form': comment_form,  # Pass the comment form separately
+        'post_form': post_form,  # Pass the prepopulated post form
     })
 
 

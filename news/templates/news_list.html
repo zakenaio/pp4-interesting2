@@ -47,8 +47,7 @@
                         </p>
                     </div>
                     {% if user.is_authenticated %}
-                    <button data-bs-toggle="modal" data-bs-target="#editPostModal-{{ post.slug }}">Edit</button>
-
+                    
                     <!-- Edit Post Modal -->
                     <div class="modal fade" id="editPostModal-{{ post.slug }}" tabindex="-1" aria-labelledby="editPostModalLabel-{{ post.slug }}" aria-hidden="true">
                         <div class="modal-dialog">
@@ -58,28 +57,32 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- Begin form for editing -->
+                                    <!-- EDIT -->
                                     <form method="post" action="{% url 'edit_news' slug=post.slug %}">
                                         {% csrf_token %}
-                                        <!-- Render the form fields -->
                                         {{ form.as_p }}
-                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                        <div class="d-inline">
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        
                                     </form>
-                                    <!-- Begin form for deletion -->
-                                    <form method="post" action="{% url 'delete_news' slug=post.slug %}">
+                                    <!-- DELETE -->
+                                    <form method="post" action="{% url 'delete_news' slug=post.slug %}" class="d-inline">
                                         {% csrf_token %}
                                         <button type="submit" class="btn btn-danger">Delete</button>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {% endif %}
+                    
                 </div>
                 <div class="row post-footer">
                     <div class="col-6 category-btn">
                         <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
+                        <button data-bs-toggle="modal" data-bs-target="#editPostModal-{{ post.slug }}" class="btn btn-primary">Edit</button>
+                        {% endif %}
                     </div>
                     <div class="col-6 social-btn">
                         <a href="{% url 'news_details' slug=post.slug %}">
