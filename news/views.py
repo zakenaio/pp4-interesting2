@@ -63,7 +63,7 @@ def create_news(request):
             news_post = form.save(commit=False)
             news_post.author = request.user
             news_post.save()
-            return redirect('news_list')
+            return redirect('news_details', slug=news_post.slug)
     return JsonResponse({'error': "Invalid request"}, status=400)
 
 
