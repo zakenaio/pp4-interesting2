@@ -1,5 +1,5 @@
+// Vote system
 $(document).ready(function () {
-    // Vote system
     $('.vote-icon').on('click', function () {
         var postSlug = $(this).data('post-slug');
         var $this = $(this); // Store the clicked element for use in the callback
@@ -23,54 +23,53 @@ $(document).ready(function () {
 });
 
 // Comments
-$(document).ready(function () {
-    $('#comment-form').on('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-        
-        var formData = $(this).serialize();
+$('.comment-form').on('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+    var formData = $(this).serialize();
 
-        // Make an AJAX request to submit the form data
-        $.ajax({
-            url: $(this).attr('action'), 
-            method: $(this).attr('method'), 
-            data: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            },
-            success: function (response) {
-                $('#comment-section').append('<li><strong>' + response.author_name + '</strong>: ' + response.text + '</li>');
-                // Clear the form after successful submission
-                $('#comment-form')[0].reset();
-            },
-            error: function (xhr, status, error) {
-                // Handle any errors
-                console.error('Error:', error);
-            }
-        });
+    $.ajax({
+        url: $(this).attr('action'), 
+        method: $(this).attr('method'), 
+        data: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        success: function (response) {
+            // Append the new comment to the list of comments
+            $('.comments-list').append('<li>' + response.author_name + ': ' + response.text + '</li>');
+            // Clear the form fields
+            $('.comment-form')[0].reset();
+        },
+        error: function (xhr, status, error) {
+            console.error('Error:', error);
+        }
     });
 });
 
 // Create News
-document.getElementById('createNewsForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var formData = new FormData(this);
-    
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle response data (e.g., close modal, show message)
-        console.log(data);
-    })
-    .catch(error => {
-        // Handle errors
-        console.error('Error:', error);
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    var createNewsForm = document.getElementById('createNewsForm');
+    if (createNewsForm) {
+        createNewsForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    }
 });
 
 // Function to retrieve CSRF token from cookies

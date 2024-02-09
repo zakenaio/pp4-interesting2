@@ -9,7 +9,10 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    form = CommentForm  
+    form = CommentForm
+    list_display = ('author_name', 'post', 'pub_date')
+    list_filter = ('post', 'pub_date')
+    fields = ['post', 'author_name', 'text']
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -27,3 +30,4 @@ class CommentForm(forms.ModelForm):
         fields = ['post', 'author_name', 'text'] 
 
 admin.site.register(Profile) 
+

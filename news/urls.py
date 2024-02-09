@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from .views import news_list, create_news
+from .views import news_list, delete_news, edit_news
 
 
 
@@ -10,6 +10,7 @@ urlpatterns = [
     path('top-posts/', views.top_posts, name='top_posts'),
     path('vote/', views.vote, name='vote'),
     path('create_news/', views.create_news, name='create_news'),
-    path('edit_news/<slug:slug>/', views.edit_news, name='edit_news'),
-    path('delete_news/<slug:slug>/', views.delete_news, name='delete_news'),
+    path('edit_news/<slug:slug>/', edit_news, name='edit_news'),
+    path('delete_news/<slug:slug>/', delete_news, name='delete_news'),
+    path('delete_comment/<int:comment_id>/', views.delete_comment, name='delete_comment'),
 ]
