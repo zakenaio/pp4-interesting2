@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from django import forms
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.contrib.auth.models import User
-from PIL import Image
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
@@ -28,6 +28,7 @@ class News_Post(models.Model):
     slug = models.SlugField(null=True, blank=True, unique=True)
     content = RichTextUploadingField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    featured_image = CloudinaryField('image', default='placeholder')
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     pub_date = models.DateTimeField(auto_now_add=True)
     votes = models.IntegerField(default=0)
