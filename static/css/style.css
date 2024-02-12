@@ -9,7 +9,7 @@ body {
 }
 
 img {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -27,6 +27,13 @@ img {
     -ms-transition: background-color 1.5s;
     -o-transition: background-color 1.5s;
 }
+
+.logged-text {
+    font-size: .8em;
+    font-weight: 400;
+    color: #f3f3f3;
+}
+
 
 /* fade to this color */
 .dark-background {
@@ -289,6 +296,7 @@ h3 a {
 animation: pulse 1s infinite;
 }
 
+/* HEART VOTE PULSE */
 @keyframes pulse {
     0% {
         transform: scale(1);
