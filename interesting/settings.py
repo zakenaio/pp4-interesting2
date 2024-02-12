@@ -99,9 +99,9 @@ DATABASES = {
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'deb2xss1w',
-    'API_KEY': '841617725872381',
-    'API_SECRET': 'WNvxGUQ88K_bxRlBYWEVI8YZWgc'
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET')
 }
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
