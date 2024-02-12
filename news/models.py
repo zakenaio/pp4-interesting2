@@ -33,6 +33,9 @@ class News_Post(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     votes = models.IntegerField(default=0)
 
+    class Meta:
+        db_table = 'news_post'  # Explicitly specify the table name
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
@@ -44,7 +47,6 @@ class News_Post(models.Model):
                 num += 1
             self.slug = unique_slug
         super(News_Post, self).save(*args, **kwargs)
-
 
     def __str__(self):
         return self.title
