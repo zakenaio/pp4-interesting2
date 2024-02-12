@@ -201,7 +201,7 @@
                     {% load account %}
 
                     <h4>Create News</h4>
-                    <form method="post" action="{% url 'create_news' %}">
+                    <form method="post" action="{% url 'create_news' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ news_post_form.as_p }}
                         <button type="submit" class="btn btn-outline-success">Create Post</button>

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Latest News{% endblock %}
 
 {% block content %}
@@ -42,6 +42,15 @@
                 </div>
                 <div class="row">
                     <div class="content">
+                        
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                alt="placeholder image">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                alt="{{ post.title }}">
+                            {% endif %}
+                        
                         <p>
                             {{ post.content | safe }}
                         </p>

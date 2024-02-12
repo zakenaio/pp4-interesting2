@@ -14,7 +14,7 @@ class PostForm(forms.ModelForm):
 class NewsPostForm(forms.ModelForm):
     class Meta:
         model = News_Post
-        fields = ['title', 'author', 'content', 'category',]
+        fields = ['title', 'author', 'content', 'category', 'featured_image',]
     
     def __init__(self, *args, **kwargs):
         prefix = kwargs.get('prefix', '')
@@ -23,6 +23,7 @@ class NewsPostForm(forms.ModelForm):
         self.fields['author'].widget.attrs['id'] = f'{prefix}_id_author'
         self.fields['content'].widget.attrs['id'] = f'{prefix}_id_content'
         self.fields['category'].widget.attrs['id'] = f'{prefix}_id_category'
+        self.fields['featured_image'].widget.attrs['id'] = f'{prefix}_featured_image'
 
 class CommentForm(forms.ModelForm):
     class Meta:

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% block title %}Latest News{% endblock %}
 
 {% block content %}
@@ -19,6 +20,15 @@
             <div class="p-5 col-lg-10 col-md-12 mx-auto content-container">
                 <div class="row">
                     <div class="content">
+
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="" src="{% static 'images/default.jpg' %}"
+                            alt="placeholder image">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                            alt="{{ post.title }}">
+                        {% endif %}
+                    
                         <p>
                             {{ post.content | safe }}
                         </p>
@@ -27,8 +37,15 @@
 
                 <div class="row auth-div">
                     <div class="profile-image-div">
+
+                        {% if "avatar" in post.avatar.url %}
+                        <img class="card-img-top" src="{% static 'images/avatar.jpg' %}"
+                            alt="avatar image">
+                        {% else %}
                         <img src="{{ post.author.profile.avatar.url }}" class="profile-image-details"
-                            alt="author's face">
+                        alt="author's face">
+                        {% endif %}
+
                     </div>
                     <div class="col">
                         <h5 class="auth-details">{{ post.author.username }}</h5>
@@ -106,7 +123,7 @@
                 </div>
                 <div class="modal-body">
                     <!-- EDIT -->
-                    <form method="post" action="{% url 'edit_news' slug=post.slug %}">
+                    <form method="post" action="{% url 'edit_news' slug=post.slug %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ post_form.as_p }}
                         <div class="d-inline">
