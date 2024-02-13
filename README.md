@@ -541,19 +541,21 @@ Local Development vs. Heroku Deployment: Key Differences
 While developing and testing your application locally can be convenient, the environment is distinct from a live deployment setting like Heroku. Here's a breakdown of the key differences:
 
 1. Logging:
-
 Local: DEBUG mode is True, providing detailed error logs for easier troubleshooting.
 Heroku: DEBUG is False to optimize performance and minimize security risks.
-2. Database:
 
+
+2. Database:
 Local: You likely use a local database (e.g., SQLite) for convenience.
 Heroku: Heroku's Postgres database offers a robust and managed solution for production use.
-3. Sensitive Information:
 
+
+3. Sensitive Information:
 Local: Sensitive data (e.g., SECRET_KEY, DATABASE_URL) might be stored in local configuration files.
 Heroku: Store such information securely as environment variables in Heroku, accessible only to your application.
-4. Static and Media Files:
 
+
+4. Static and Media Files:
 Local: These files might be served directly from your local development environment.
 Heroku: Services like Cloudinary and Whitenoise ensure efficient and secure delivery of static and media files in production.
 By understanding these differences and making the necessary adjustments, you can ensure your application runs smoothly and securely on Heroku, providing a reliable and optimal experience for your users.
