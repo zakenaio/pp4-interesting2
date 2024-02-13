@@ -14,13 +14,12 @@ class PostForm(forms.ModelForm):
 class NewsPostForm(forms.ModelForm):
     class Meta:
         model = News_Post
-        fields = ['title', 'author', 'content', 'category', 'featured_image',]
+        fields = ['title', 'content', 'category', 'featured_image',]
     
     def __init__(self, *args, **kwargs):
         prefix = kwargs.get('prefix', '')
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs['id'] = f'{prefix}_id_title'
-        self.fields['author'].widget.attrs['id'] = f'{prefix}_id_author'
         self.fields['content'].widget.attrs['id'] = f'{prefix}_id_content'
         self.fields['category'].widget.attrs['id'] = f'{prefix}_id_category'
         self.fields['featured_image'].widget.attrs['id'] = f'{prefix}_featured_image'

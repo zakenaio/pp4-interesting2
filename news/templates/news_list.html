@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
+
 {% load static %}
-{% block title %}Latest News{% endblock %}
 
 {% block content %}
 
@@ -32,7 +32,9 @@
                     </div>
                     <div class="col-lg-3 col-md-12 flex-end">
                         <div class="profile-image-div">
-                            <img src="{{ post.author.profile.avatar.url }}" class="profile-image" alt="author's face">
+                            {% if post.author.profile.avatar.url %}
+                                <img src="{{ post.author.profile.avatar.url }}" class="profile-image" alt="author's face">
+                            {% endif %}
                         </div>
                         <div class="auth-div">
                             <h5 class="auth">{{ post.author.username }}</h5>
@@ -43,13 +45,10 @@
                 <div class="row">
                     <div class="content">
                         
-                            {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                alt="placeholder image">
-                            {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                alt="{{ post.title }}">
-                            {% endif %}
+                        <!-- ARTICLE IMAGE VIA CLOUDINARY -->
+                        {% if post.featured_image %}
+                        <img class="img" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
                         
                         <p>
                             {{ post.content | safe }}

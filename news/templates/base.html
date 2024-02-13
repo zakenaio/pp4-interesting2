@@ -22,11 +22,11 @@
     <nav class="navbar text-shadow fixed-top dark-background navbar-dark navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="/../">interesting</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'top_posts' %}">Popular News</a>
@@ -43,13 +43,6 @@
                     </li>
 
                     {% if user.is_authenticated %}
-                <!-- 
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                -->
-
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                         data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
@@ -81,7 +74,7 @@
     {% endblock %}
     </main>
 
-    <!-- Sign in modal -->
+    <!-- Sign In modal -->
     <div class="modal shadow fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -120,7 +113,7 @@
         </div>
     </div>
 
-    <!-- Sign up modal -->
+    <!-- Sign Up modal -->
     <div class="modal shadow fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -205,29 +198,29 @@
         </div>
     </div>
 
-        <!-- Sign in modal -->
-        <div class="modal shadow fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="logoutModalLabel">Sign Out</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
+    <!-- Sign Out modal -->
+    <div class="modal shadow fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="logoutModalLabel">Sign Out</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
 
-            <p>{% trans 'Are you sure you want to sign out?' %}</p>
-                        <form method="post" action="{% url 'account_logout' %}">
-                            {% csrf_token %}
-                            {% if redirect_field_value %}
-                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                            {% endif %}
-                            <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
-                        </form>
-                    </div>
+        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <button class="btn btn-outline-warning right" type="submit">{% trans 'Sign Out' %}</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Create News Modal -->
     <div class="modal shadow fade" id="createNewsModal" tabindex="-1" aria-labelledby="createNewsModalLabel"
@@ -241,7 +234,6 @@
                 <div class="modal-body">
                     {% load account %}
 
-                    <h4>Create News</h4>
                     <form method="post" action="{% url 'create_news' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ news_post_form.as_p }}

@@ -15,6 +15,7 @@ img {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    width: 100%;
 }
 
 /* NAV */
@@ -29,11 +30,12 @@ img {
 }
 
 .logged-text {
-    font-size: .8em;
-    font-weight: 400;
     color: #f3f3f3;
 }
 
+.nav-item p.nav-link {
+    margin-bottom: 0;
+}
 
 /* fade to this color */
 .dark-background {
