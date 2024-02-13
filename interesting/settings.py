@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'news',
     'cloudinary_storage',
     'cloudinary',
-    'django_extensions',
     
 ]
 
