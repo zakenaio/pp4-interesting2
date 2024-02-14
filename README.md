@@ -3,16 +3,32 @@
 MULTI SCREENSHOT OF SITE. 
 ![screenshot](documentation/mockup.png)
 
-Reasons for site. 
+Blast from the Web2.0 Past:
+
+Remember the glory days of the early 2000s internet? When user-generated content exploded, dethroning mainstream media and putting the power firmly in our hands? Comments and votes ruled the roost, shaping how news traveled and what stories took center stage. It was a revolutionary time, brimming with the DIY spirit that birthed giants like Reddit, 4chan, 9gag, Digg, and YouTube. 
 
 
 ## UX
 
-IMAGE HOME ![screenshot](documentation/UX/image-url)
-IMAGE MENU ![screenshot](documentation/UX/image-url)
-IMAGE TOP ![screenshot](documentation/UX/image-url)
-IMAGE ARTICLE ![screenshot](documentation/UX/image-url)
-IMAGE COMMENT ![screenshot](documentation/UX/image-url)
+Given my nostalgia for a bygone era, I truly aimed to emulate the aesthetics of the mid-2000s – characterized by rounded shapes and muted colors. Everything seemed to exist in blog form during that time.
+
+The menu remains fixed at the top, providing a visual cue for your current status. Initially featuring a fully transparent background, it gradually fades in before any direct content appears beneath it, preventing it from becoming unreadable.
+
+Hero 
+![screenshot](documentation/UX/ux-hero.png)
+
+Menu  
+![screenshot](documentation/UX/ux-menu1.png)
+![screenshot](documentation/UX/ux-menu2.png)
+
+Popular News
+![screenshot](documentation/UX/ux-popular.png)
+
+Article
+![screenshot](documentation/UX/ux-article-details.png)
+
+Comments
+![screenshot](documentation/UX/ux-article-comments.png)
 
 ### Colour Scheme
 
@@ -174,6 +190,7 @@ Overall, modals provide a good balance between user experience, development effi
 - **Engagement and urgency:** The subtle heart animation on hover encourages interaction and creates a sense of dynamic content.
 
 This combination aims to create a more engaging and dynamic news experience while remaining accessible to all users.
+
 [![Image from Gyazo](https://i.gyazo.com/5996e2971cb332aed73686cebfe8293f.gif)](https://gyazo.com/5996e2971cb332aed73686cebfe8293f)
 
 
@@ -699,6 +716,7 @@ Sources for real code, images, links etc.
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [StackOverflow](https://stackoverflow.com/) |  |  |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Gyazo](https://gyazo.com/) | README and TESTING | Tool for creating gif-screenshoots | 
 
 ### Media
 
