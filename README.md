@@ -155,6 +155,28 @@ Modal Edit News
 
 Explain features. Why modals, etc. 
 
+### Modals
+##### Why I chose modals:
+- **Simplified user experience:** Modals avoid page reloads, offering a smoother and faster experience for actions like editing data, confirming choices, or viewing previews. This keeps users engaged and focused on the task at hand.
+- **Navigation clarity:** With fewer distinct pages, users are less likely to get lost within your application.
+- **Development and maintenance efficiency:** Reusable modularity reduces development time and simplifies code maintenance.
+
+##### Considerations:
+- **Search engine indexing:** Modal content might not be indexed as effectively as dedicated pages.
+- **Responsiveness:** While adaptable, ensure they function well on various screen sizes and devices.
+
+Overall, modals provide a good balance between user experience, development efficiency, and accessibility when designed and implemented thoughtfully.
+
+### Popular news -tab
+##### Going beyond "Latest first":
+- **User empowerment through voting:** The integrated vote system (represented by a heart icon) allows users to directly influence news visibility, promoting content they appreciate.
+- **Accessibility:** No account creation is required, catering to casual news readers who don't need full registration.
+- **Engagement and urgency:** The subtle heart animation on hover encourages interaction and creates a sense of dynamic content.
+
+This combination aims to create a more engaging and dynamic news experience while remaining accessible to all users.
+[![Image from Gyazo](https://i.gyazo.com/5996e2971cb332aed73686cebfe8293f.gif)](https://gyazo.com/5996e2971cb332aed73686cebfe8293f)
+
+
 ### Existing Features
 
 - **Welcome screen**
@@ -162,11 +184,13 @@ Explain features. Why modals, etc.
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/feat/feature01.png)
+[![Image from Gyazo](https://i.gyazo.com/2d83f568a96df12d54a5048264917507.gif)](https://gyazo.com/2d83f568a96df12d54a5048264917507)
 
 - **Menu - fade in/out**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
+    
+[![Image from Gyazo](https://i.gyazo.com/260bbe2e42c8175e400bf93b918e58e4.gif)](https://gyazo.com/260bbe2e42c8175e400bf93b918e58e4)
 ![screenshot](documentation/feat/feature01.png)
 
 - **Sign In Modal**
@@ -239,7 +263,7 @@ Add to this.
 ## Database Design
 
 ```python
-  CATEGORIES 
+    CATEGORIES 
 class Category(models.Model):
     """
     Represents a category for posts. Each category has a unique name,
@@ -251,8 +275,27 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+```
 
-NEW POSTS
+Model Purpose:
+This model represents a category for news posts in your application. Categories can be used to organize and group posts based on their content or theme.
+
+Attributes:
+name: This is a character field with a maximum length of 100 characters and is unique, meaning no two categories can have the same name. This ensures clear identification of each category.
+description: This is a text field that allows you to add an optional description for the category. This can be used to provide more context or information about the category's content.
+pub_date: This is a datetime field that automatically sets the current date and time whenever a new category is created. This can be useful for tracking the creation history of categories.
+
+Additional Method:
+__str__: This method defines how the model instance is represented as a string, returning the category name. This is helpful for displaying categories in lists or other contexts.
+
+Key Points:
+This model is relatively simple but serves a crucial role in organizing your news posts.
+The unique name attribute ensures clear identification of each category.
+The optional description field provides additional context for categories.
+The pub_date field tracks the creation time of each category.
+
+```python
+    NEWS POSTS
 class News_Post(models.Model):
     """
     Represents a news post. Each post has a title, rich text content,
@@ -289,7 +332,31 @@ class News_Post(models.Model):
 
     def __str__(self):
         return self.title
+```
 
+Model Purpose:
+Represents a news post in your application.
+
+Attributes:
+title: A character field with a maximum length of 255 characters to store the post title.
+slug: A slug field that uniquely identifies each post. It is automatically generated from the title but can be manually edited.
+content: A rich text field allowing users to create content with formatting, images, and other features.
+author: A foreign key relationship to the User model, indicating the post's author.
+featured_image: A Cloudinary field for storing an optional image associated with the post.
+category: A foreign key relationship to the Category model, allowing the post to belong to a specific category (optional).
+pub_date: A datetime field automatically set to the current time whenever a new post is created.
+votes: An integer field storing the number of votes received by the post (initially set to 0).
+
+Additional Methods:
+save: This method overrides the default save behavior to ensure unique slugs for each post. It generates a unique slug based on the title if none is provided.
+__str__: This method defines how the model instance is represented as a string, returning the post title.
+
+Key Points:
+This model uses foreign keys to connect News_Post instances to User and Category models.
+The featured_image field uses Cloudinary for image storage and management.
+The save method ensures unique slugs for each post.
+
+```python
 COMMENTS
 class Comment(models.Model):
     """
@@ -304,7 +371,26 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment by {self.author_name or 'Anonymous'} on {self.post.title}"
+```
 
+Model Purpose:
+This model captures user comments linked to specific news posts in your application.
+
+Attributes:
+post: This is a foreign key relationship to the News_Post model, indicating which post the comment belongs to. This allows linking comments to their corresponding news articles.
+author_name: This is a character field with a maximum length of 100 characters, storing the name of the comment author. It's set to blank=False and null=True, meaning it cannot be empty but can be null for unauthenticated users.
+text: This is a text field containing the actual comment content written by the user.
+pub_date: This is a datetime field automatically set to the current date and time whenever a new comment is created, reflecting the comment's creation time.
+
+Additional Method:
+__str__: This method defines how a Comment instance is represented as a string. It combines the author name (or "Anonymous" for unauthenticated users) and the title of the associated post for informative display.
+
+Key Points:
+This model allows users to leave comments on your news posts.
+It captures both authenticated and unauthenticated user comments.
+The __str__ method provides a meaningful representation of each comment.
+
+```python
 FORM for COMMENTS
 class CommentForm(forms.ModelForm):
     """
@@ -313,7 +399,23 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         exclude = ['post']
+```
 
+Form Model Purpose:
+This form handles user input for creating or editing comments. It allows users to enter the text of their comments without needing to manually specify the associated post, which is automatically handled through the form's relationship with the Comment model.
+
+Form Configuration:
+forms.ModelForm: This signifies that CommentForm inherits from the ModelForm class, providing built-in functionality for working with Django models.
+Meta: This nested class defines essential options for the form.
+model: Specifies the Comment model as the form's basis, ensuring the form fields correspond to model attributes.
+exclude: Explicitly excludes the post field from the form. This makes sense since the post is automatically linked based on the context where the form is used (e.g., a specific news post view).
+
+Key Points:
+This form simplifies comment creation and editing by handling necessary fields.
+Excluding the post field reflects its automatic association within specific views.
+This form effectively captures user input for comment content.
+
+```python
 PROFILES for USER for USER IMAGE
 class Profile(models.Model):
     """
@@ -333,6 +435,24 @@ class Profile(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 ```
+
+Model Purpose:
+This model represents a user profile in your application, storing additional information and an avatar image for each user.
+
+Attributes:
+user: This is a one-to-one relationship with the User model, indicating that each Profile instance belongs to a unique user. This ensures a single profile per user.
+avatar: This is a CloudinaryField storing the user's avatar image URL. It has a default value of "avatar" which could be used as a placeholder image.
+
+Additional Methods:
+__str__: This method defines how a Profile instance is represented as a string, combining the user's username and "Profile" for informative display.
+save: This method overrides the default save behavior. While its specific purpose isn't explicitly stated, it likely performs additional actions related to the profile image after saving the model instance.
+
+Key Points:
+This model allows users to have associated profile information and avatar images.
+The one-to-one relationship guarantees a unique profile per user.
+Cloudinary is used for image storage and management.
+
+
 
 ![ERD](documentation/erd.png)
 
