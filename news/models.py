@@ -42,6 +42,11 @@ class News_Post(models.Model):
         db_table = 'news_post'
 
     def save(self, *args, **kwargs):
+        """
+        Overrides the default save behavior to ensure unique
+        slugs for each post. Generates a unique slug based on
+        the title if none is provided.
+        """
         if not self.slug:
             self.slug = slugify(self.title)
             # Unique slug,
