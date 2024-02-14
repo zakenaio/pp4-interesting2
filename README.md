@@ -1,19 +1,18 @@
 # [PP4 INTERESTING NEWS](https://pp4-interesting-736b0c86bab7.herokuapp.com)
 
+MULTI SCREENSHOT OF SITE. 
+![screenshot](documentation/mockup.png)
 
 Reasons for site. 
 
 
-MULTI SCREENSHOT OF SITE. 
-![screenshot](documentation/mockup.png)
-
 ## UX
 
-IMAGE HOME
-IMAGE MENU
-IMAGE TOP
-IMAGE ARTICLE
-IMAGE COMMENT
+IMAGE HOME ![screenshot](documentation/UX/image-url)
+IMAGE MENU ![screenshot](documentation/UX/image-url)
+IMAGE TOP ![screenshot](documentation/UX/image-url)
+IMAGE ARTICLE ![screenshot](documentation/UX/image-url)
+IMAGE COMMENT ![screenshot](documentation/UX/image-url)
 
 ### Colour Scheme
 
@@ -158,12 +157,47 @@ Explain features. Why modals, etc.
 
 ### Existing Features
 
-- **Title for feature #1**
+- **Welcome screen**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/feat/feature01.png)
 
+- **Menu - fade in/out**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
+
+- **Sign In Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
+
+- **Sign Up Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
+
+- **Sign Out Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
+
+- **Create News Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
+
+- **Edit News Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/feat/feature01.png)
 
 ### Future Features
 
@@ -302,52 +336,42 @@ class Profile(models.Model):
 
 ![ERD](documentation/erd.png)
 
-User:
-News_Post: One User can author many News_Posts through a foreign key relationship.
-Profile: One User can have one Profile through a one-to-one relationship.
-Comment: One User can write comments on many News_Posts (indirect connection through the News_Post model).
-
-Category:
-News_Post: Many News_Posts can belong to one Category through a foreign key relationship.
-
-News_Post:
-User: One News_Post is written by one User (author foreign key).
-Category: One News_Post can belong to one Category (optional).
-Comment: One News_Post can have many Comments through a foreign key relationship.
-
-Comment:
-News_Post: One Comment belongs to one News_Post (foreign key).
-User: One Comment can be written by a User (indirect connection through the News_Post model).
-
-Profile:
-User: One Profile belongs to one User (one-to-one relationship).
-
-Entities:
-
-User: Represents a user of the system.
+#### User:
 Attributes: id (primary key), username, email, password (hashed), profile (foreign key to Profile).
-Profile: Represents a user's profile information.
-Attributes: id (primary key), user (one-to-one relationship with User), avatar_url (Cloudinary image URL).
-Category: Represents a category for posts.
-Attributes: id (primary key), name (unique), description, pub_date.
-News_Post: Represents a news post.
-Attributes: id (primary key), title, slug (unique), content (HTML text with Cloudinary image URLs), author (foreign key to User), category (foreign key to Category), pub_date, votes.
-Comment: Represents a comment on a post.
-Attributes: id (primary key), post (foreign key to News_Post), author_name, text, pub_date.
-Relationships:
+Relationships: One-to-one with Profile, One-to-many with News_Post (as the author), One-to-many with Comment (indirectly through News_Post).
 
-One-to-one: User to Profile
+#### Profile:
+Attributes: id (primary key), user (one-to-one relationship with User), avatar (Cloudinary image URL).
+Relationships: One-to-one with User.
+
+#### Category:
+Attributes: id (primary key), name (unique), description, pub_date.
+
+#### News_Post:
+Attributes: id (primary key), title, slug (unique), content (RichTextUploadingField), author (foreign key to User), featured_image (Cloudinary image URL), category (foreign key to Category), pub_date, votes.
+Relationships: One-to-many with Comment, Many-to-one with Category.
+
+#### Comment:
+Attributes: id (primary key), post (foreign key to News_Post), author_name, text, pub_date.
+Relationships: Many-to-one with News_Post.
+
+#### Relationships:
+One-to-one: 
+- User to Profile.
+
 One-to-many:
-User to News_Post
-Category to News_Post
-News_Post to Comment
+- User to News_Post (as the author).
+- News_Post to Comment.
+
 Many-to-one:
-News_Post to Category
-Comment to News_Post
+- News_Post to Category.
 
 ## Agile Development Process
 
 This is hard, this is almost harder than ERD. Spend two days. 
+https://github.com/users/zakenaio/projects/2
+
+![SCREENSHOT AGILE]()
 
 ### GitHub Projects
 
@@ -357,27 +381,6 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
 ![screenshot](documentation/gh-projects.png)
-
-### GitHub Issues
-
-[GitHub Issues](https://github.com/zakenaio/pp4-interesting2/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories.
-
-It also helped with milestone iterations on a weekly basis.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Open Issues](https://github.com/zakenaio/pp4-interesting2/issues)
-
-    ![screenshot](documentation/gh-issues-open.png)
-
-- [Closed Issues](https://github.com/zakenaio/pp4-interesting2/issues?q=is%3Aissue+is%3Aclosed)
-
-    ![screenshot](documentation/gh-issues-closed.png)
 
 ### MoSCoW Prioritization
 
@@ -561,14 +564,14 @@ Heroku: Services like Cloudinary and Whitenoise ensure efficient and secure deli
 By understanding these differences and making the necessary adjustments, you can ensure your application runs smoothly and securely on Heroku, providing a reliable and optimal experience for your users.
 
 
-
 ## Credits
 
-
+Sources for help. 
 
 ### Content
 
-
+ADD MORE! 
+Sources for real code, images, links etc. 
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -579,38 +582,12 @@ By understanding these differences and making the necessary adjustments, you can
 
 ### Media
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
-
-
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
