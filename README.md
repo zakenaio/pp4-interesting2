@@ -32,23 +32,16 @@ Comments
 
 ### Colour Scheme
 
-IMG COLOURS 
+![Colors](documentation/UX/colors.png)
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#636363` used for background.
+- `#AAAAA9` used for article background.
 
+- `#636363` used for primary text.
+- `#f3f3f3` used for headers and links.
 
-#636363; bg
-rgb(170, 170, 169) bg article
-
-#636363; text
-#f3f3f3; link - header
-
-rgb(92, 92, 85); footer bg
-#37382f; footer text
-
+- `#5d5c55` used for footer background.
+- `#37382f` used for footer text.
 
 
 Explain colours. 
