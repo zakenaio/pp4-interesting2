@@ -1,8 +1,11 @@
-{% load static %}
-{% load i18n %}
+<!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
+    
+    {% load static %}
+    {% load i18n %}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Share your news, join us at Interesting">
@@ -12,7 +15,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>INTERESTING - YOUR NEWS FIX</title>
 </head>
@@ -35,12 +38,10 @@
                 <ul class="d-flex navbar-nav">
 
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
                     <p class="nav-link">You are logged in as {{ user }}</p>
                     {% else %}
                     <p class="nav-link">You are not logged in</p>
                     {% endif %}
-                    </li>
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -228,7 +229,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="createNewsModal">Create News</h4>
+                    <h4 class="modal-title" id="createNewsModallabel">Create News</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -255,64 +256,59 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="raw-footer">
-                    <div class="col-sm-12 col-md-6 col-xl-5 mx-auto">
-                        <div class="col-8 mx-auto">
-                            <h5>INTERESTING</h5>
-                            <p>tell me more.</p>
-                            <hr>
-                            <i class="fa-solid fa-house"></i>
-                            <p>A place for you to see your
-                                best news, the good and the
-                                bad. </p>
-                            <p>The idea is to let you, the users
-                                post the news you find interesting.
-                                and then but the magic of social
-                                media make sure you have a good
-                                time. Read something you didnt
-                                know, learn a new subject, find
-                                a new hobbie.</p>
-                            <hr>
-                            <i class="fa-solid fa-envelope"></i>
-                            <p><strong>INTE.RESTING</strong><br>
-                                Kneppingen 21<br>
-                                60332 Norrköping</p>
-                            <h6>Sweden</h6>
-                            <i class="fa-solid fa-phone"></i>
-                            <p></i>+46 0736 74 6886</p>
-                            <hr>
-                        </div>
-
-                        <div class="footer-social">
-                            <a href="#" target="_blank" title="facebook" rel="noopener"
-                                aria-label="Visit our Facebook page (opens in a new tab)">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" target="_blank" title="Twitter / X" rel="noopener"
-                                aria-label="Visit our Twitter / X page (opens in a new tab)">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" target="_blank" title="GitHub" rel="noopener"
-                                aria-label="Visit our GitHub page (opens in a new tab)">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="#" target="_blank" title="Instagram" rel="noopener"
-                                aria-label="Visit our Instagram page (opens in a new tab)">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" target="_blank" title="LinkedIn" rel="noopener"
-                                aria-label="Visit our LinkedIn page (opens in a new tab)">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
+                <div class="col-sm-12 col-md-6 col-xl-5 mx-auto raw-footer">
+                    <div class="col-8 mx-auto">
+                        <h5>INTERESTING</h5>
+                        <p>tell me more.</p>
+                        <hr>
+                        <i class="fa-solid fa-house"></i>
+                        <p>A place for you to see your
+                            best news, the good and the
+                            bad. </p>
+                        <p>The idea is to let you, the users
+                            post the news you find interesting.
+                            and then but the magic of social
+                            media make sure you have a good
+                            time. Read something you didnt
+                            know, learn a new subject, find
+                            a new hobbie.</p>
+                        <hr>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><strong>INTE.RESTING</strong><br>
+                            Kneppingen 21<br>
+                            60332 Norrköping</p>
+                        <h6>Sweden</h6>
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+46 0736 74 6886</p>
+                        <hr>
                     </div>
 
+                    <div class="footer-social">
+                        <a href="#" target="_blank" title="facebook" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new tab)">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter / X" rel="noopener"
+                            aria-label="Visit our Twitter / X page (opens in a new tab)">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="GitHub" rel="noopener"
+                            aria-label="Visit our GitHub page (opens in a new tab)">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new tab)">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="LinkedIn" rel="noopener"
+                            aria-label="Visit our LinkedIn page (opens in a new tab)">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>
