@@ -39,11 +39,23 @@ IMG COLOURS
 - `#4A4A4F` used for secondary text.
 - `#009FE3` used for secondary highlights.
 
+
+#636363; bg
+rgb(170, 170, 169) bg article
+
+#636363; text
+#f3f3f3; link - header
+
+rgb(92, 92, 85); footer bg
+#37382f; footer text
+
+
+
 Explain colours. 
 
 ### Typography
 
-- Barlow. Link to google fonts!
+- [Barlow](https://fonts.google.com/specimen/Barlow) Barlow was chosen for all content.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
