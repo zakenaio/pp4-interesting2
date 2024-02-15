@@ -30,6 +30,9 @@ Article
 Comments
 ![screenshot](documentation/UX/ux-article-comments.png)
 
+Footer
+![screenshot](documentation/UX/ux-footer.png)
+
 ### Colour Scheme
 
 ![Colors](documentation/UX/colors.png)
