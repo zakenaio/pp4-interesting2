@@ -35,13 +35,16 @@
                         <a class="nav-link" href="{% url 'top_posts' %}">Popular News</a>
                     </li>
                 </ul>
-                <ul class="d-flex navbar-nav">
 
+                <div class="nav-item">
                     {% if user.is_authenticated %}
-                    <p class="nav-link">You are logged in as {{ user }}</p>
+                    <p class="nav-link logged-text">You are logged in as {{ user }}</p>
                     {% else %}
-                    <p class="nav-link">You are not logged in</p>
+                    <p class="nav-link logged-text">You are not logged in</p>
                     {% endif %}
+                </div>
+
+                <ul class="d-flex navbar-nav">
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -63,9 +66,7 @@
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
                     </li>
-
                     {% endif %}
-
                 </ul>
             </div>
         </div>
@@ -73,6 +74,7 @@
 
     {% block content %}
     {% endblock %}
+
     </main>
 
     <!-- Sign In modal -->
@@ -125,7 +127,6 @@
                 <div class="modal-body">
 
                     {% if user.is_authenticated %}
-                    {% include "account/snippets/already_logged_in.html" %}
                     {% else %}
 
                     <p>
@@ -140,47 +141,48 @@
                                     <label for="id_username">Username:</label>
                                 </p>
                         </div>
+
                         <div class="col-8">
                             <input type="text" name="username" placeholder="Username" autocomplete="username"
                                 minlength="1" maxlength="150" required="" id="id_username">
-
                         </div>
+
                         <div class="col-4 text-end">
                             <p>
                                 <label for="id_email">Email (optional):</label>
                             </p>
-
                         </div>
+
                         <div class="col-8">
                             <input type="email" name="email" placeholder="Email address" autocomplete="email"
                                 id="id_email">
-
                         </div>
+
                         <div class="col-4 text-end">
                             <p>
                                 <label for="id_password1">Password:</label>
                             </p>
-
                         </div>
+
                         <div class="col-8">
-                            <input type="password" name="password1" placeholder="Password" autocomplete="new-password"
+                            <input type="password" name="password1" placeholder="Password"
                                 required="" id="id_password1" aria-autocomplete="list">
                             <span class="helptext"></span>
-
                         </div>
+
                         <div class="col-4 text-end">
                             <p>
                                 <label for="id_password2">Password (again):</label>
                             </p>
-
                         </div>
+
                         <div class="col-8">
                             <input type="password" name="password2" placeholder="Password (again)"
-                                autocomplete="new-password" required="" id="id_password2">
-
+                                required="" id="id_password2">
+                            
                         </div>
-                    </div>
 
+                    </div>
                     <ul>
                         <li>Your password can’t be too similar to your other personal information.</li>
                         <li>Your password must contain at least 8 characters.</li>
