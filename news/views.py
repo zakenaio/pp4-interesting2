@@ -1,13 +1,13 @@
-from django.shortcuts import render, get_object_or_404, redirect
+# Django
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
 from django.contrib import messages
 from django.http import JsonResponse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST
-from .models import News_Post, Comment
-from .forms import CommentForm, NewsPostForm
 
+# Local Django
+from .forms import CommentForm, NewsPostForm
+from .models import News_Post, Comment
 
 
 def news_list(request):
@@ -28,7 +28,7 @@ def news_details(request, slug):
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
-            comment.post = post 
+            comment.post = post
             comment.save()
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
                 return JsonResponse({
@@ -46,7 +46,6 @@ def news_details(request, slug):
             else:
                 messages.error(request, 'There was an error with your comment.')
                 return redirect('news_details', slug=slug)
-
 
     comment_form = CommentForm()
     return render(request, 'news_details.html', {
@@ -101,8 +100,8 @@ def delete_comment(request, comment_id):
 
 @require_POST
 def vote(request):
-    post_slug = request.POST.get('slug')  
-    post = get_object_or_404(News_Post, slug=post_slug) 
+    post_slug = request.POST.get('slug')
+    post = get_object_or_404(News_Post, slug=post_slug)
 
     # Increment the post's vote count and save it
     post.votes += 1

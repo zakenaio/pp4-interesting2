@@ -98,6 +98,7 @@ $.ajaxSetup({
     }
 });
 
+// Navbar fade
 window.addEventListener('scroll', function () {
     var navbar = document.querySelector('.navbar');
     var scrollPosition = window.scrollY;
@@ -109,6 +110,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Arrow
 let arrow = document.querySelector('.arrow');
 
 

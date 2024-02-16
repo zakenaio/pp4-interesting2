@@ -3,7 +3,6 @@ from . import views
 from .views import news_list, delete_news, edit_news
 
 
-
 urlpatterns = [
     path('', news_list, name='news_list'),
     path('news-details/<slug:slug>/', views.news_details, name='news_details'),

@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'news',
     'cloudinary_storage',
     'cloudinary',
-    
 ]
 
 MIDDLEWARE = [
@@ -107,10 +106,9 @@ CLOUDINARY_STORAGE = {
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full', 
-        'height': 300, 
-        'filebrowserUploadUrl': '/ckeditor/upload/',  
-        
+        'toolbar': 'full',
+        'height': 300,
+        'filebrowserUploadUrl': '/ckeditor/upload/',
     },
 }
 
