@@ -52,6 +52,7 @@ Explain colours.
 ### Typography
 
 - [Barlow](https://fonts.google.com/specimen/Barlow) Barlow was chosen for all content.
+**Clean and modern:** Its slightly rounded, low-contrast design gives a clean and modern aesthetic. 
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
@@ -61,7 +62,7 @@ Explain colours.
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to See the news, so that I can ____________.
 - As a new site user, I would like to ____________, so that I can ____________.
 - As a new site user, I would like to ____________, so that I can ____________.
 - As a new site user, I would like to ____________, so that I can ____________.
@@ -206,66 +207,53 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 - **Welcome screen**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+![screenshot](documentation/UX/ux-hero.png)
 
-![screenshot](documentation/feat/feature01.png)
-[![Image from Gyazo](https://i.gyazo.com/2d83f568a96df12d54a5048264917507.gif)](https://gyazo.com/2d83f568a96df12d54a5048264917507)
+  - The big and bold text, **INTERESTING**, with its smaller **tell me more** line under, is front and center, to try and catch the visitor. The use of a bouncing down arrow, both to create some interactivity, and movement, but also for the user to see that down here, thats where the fun begins. 
+
+[![Arrow animation](https://i.gyazo.com/2d83f568a96df12d54a5048264917507.gif)](https://gyazo.com/2d83f568a96df12d54a5048264917507)
 
 - **Menu - fade in/out**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-    
-[![Image from Gyazo](https://i.gyazo.com/260bbe2e42c8175e400bf93b918e58e4.gif)](https://gyazo.com/260bbe2e42c8175e400bf93b918e58e4)
-![screenshot](documentation/feat/feature01.png)
+[![Menu fade](https://i.gyazo.com/260bbe2e42c8175e400bf93b918e58e4.gif)](https://gyazo.com/260bbe2e42c8175e400bf93b918e58e4)
+
+  - To not be to distracting, the menu got the abillity to fade in and out based on where on the screen you are using javascript. And the fade in it self vas detirmined in the CSS. 
+  - [Scroll inspiration](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) using variations of different sources, but this whas the one i relied on most.
+
 
 - **Sign In Modal**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feat/feature01.png)
+![Sign in Modal](documentation/UX/ux-modal-signin.png)
+    - Using modals for most of the functions, as signing in feelt like the best idea, it removes complexity for the user. 
 
 - **Sign Up Modal**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feat/feature01.png)
+![screenshot](documentation/UX/ux-modal-signup.png)
+    - Same with signing up, as a user you know exactly where you are and there is no need to go back and fourth throgh pages. 
 
 - **Sign Out Modal**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feat/feature01.png)
+![screenshot](documentation/UX/ux-modal-signout.png)
+    - Signing out with a modal follows the rest of the rules for navigation. 
 
 - **Create News Modal**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feat/feature01.png)
+![screenshot](documentation/UX/ux-modal-create.png)
+    - Even here, a modal works the best, it fits well on screen, and it follows the rest of the site.
 
 - **Edit News Modal**
+![screenshot](documentation/UX/ux-modal-edit.png)
+    - Here i have thoughts. For future features, i mention Diusqus for handeling comments. The use of a modal has its benifits, to follow the rest of the sites navigation. But, if there is a lot of comments moderation of them throgh this modal might break on smaller screens. This is somehing that must be handled in future versions. 
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feat/feature01.png)
+- **Signed in / Not sign in visual key**
+![screenshot](documentation/UX/ux-log1.png) ![screenshot](documentation/UX/ux-log2.png)
+    - Knowing if you are signed in is important for the user, some elements, sign in / sign up changes to sign out, and create news depending if you are logged in or not, but as a new user a more stright forward method of knowing feelt right. 
 
 ### Future Features
 
-OpenGraph, and so on, more! 
+- OpenGraph
+    - [Metas OpenGraph](https://opengraph.dev/) I wanted to incorporate Metas functions for scraping relevant information when you add a link, for a more streamlined content creation. You as a user would be able to paste you link to the story you wanted to share, and an image, ingress, and relevant information would be prestened automagicly. 
+- Disqus
+    - [Disqus integration](https://disqus.com/) To make sure the comments are propperly handled, with comment trees and more versitile functions, the use of Disqus would be very beneficial. 
 
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
 
 ## Tools & Technologies Used
-
-Add to this.
-- pydot - for ERD 
-- ckeditor
-
-
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -275,7 +263,6 @@ Add to this.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
-- [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
@@ -283,6 +270,8 @@ Add to this.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [phind](https://www.phind.com/) used for tips and trix, a great way to make progress when stuck. 
+- [PyDot](https://github.com/pydot/pydot) Used for creating ERD
+- [ckEditor](https://ckeditor.com/) Userd for admin-board and more advanced content creation.
 
 
 ## Database Design
@@ -721,10 +710,11 @@ Sources for real code, images, links etc.
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [StackOverflow](https://stackoverflow.com/) |  |  |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 | [Gyazo](https://gyazo.com/) | README and TESTING | Tool for creating gif-screenshoots | 
+|  | Code sources |  |
+| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | Entire site | responsive HTML/CSS/JS navbar |
+| [StackOverflow](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) | Entire site | making the navmenu fade |
 
 ### Media
 
