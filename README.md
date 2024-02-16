@@ -209,7 +209,7 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 ![screenshot](documentation/UX/ux-hero.png)
 
-  - The big and bold text, **INTERESTING**, with its smaller **tell me more** line under, is front and center, to try and catch the visitor. The use of a bouncing down arrow, both to create some interactivity, and movement, but also for the user to see that down here, thats where the fun begins. 
+  - A large, bold headline reading **INTERESTING**, with a smaller **tell me more** line underneath, takes center stage to grab the visitor's attention. A bouncing down arrow adds interactivity and movement, further hinting that scrolling down leads to the heart of the fun.
 
 [![Arrow animation](https://i.gyazo.com/2d83f568a96df12d54a5048264917507.gif)](https://gyazo.com/2d83f568a96df12d54a5048264917507)
 
@@ -217,7 +217,7 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 [![Menu fade](https://i.gyazo.com/260bbe2e42c8175e400bf93b918e58e4.gif)](https://gyazo.com/260bbe2e42c8175e400bf93b918e58e4)
 
-  - To not be to distracting, the menu got the abillity to fade in and out based on where on the screen you are using javascript. And the fade in it self vas detirmined in the CSS. 
+  - To avoid being too distracting, the menu has gained the ability to fade in and out based on your position on the screen using JavaScript. The fade-in animation itself is determined in the CSS.
   - [Scroll inspiration](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) using variations of different sources, but this whas the one i relied on most.
 
 
@@ -227,11 +227,13 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 - Using modals for most of the functions, as signing in feelt like the best idea, it removes complexity for the user. 
 
+
 - **Sign Up Modal**
 
 ![screenshot](documentation/UX/ux-modal-signup.png)
 
 - Same with signing up, as a user you know exactly where you are and there is no need to go back and fourth throgh pages. 
+
 
 - **Sign Out Modal**
 
@@ -239,30 +241,39 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 - Signing out with a modal follows the rest of the rules for navigation. 
 
+
 - **Create News Modal**
 
 ![screenshot](documentation/UX/ux-modal-create.png)
 
 - Even here, a modal works the best, it fits well on screen, and it follows the rest of the site.
 
+
 - **Edit News Modal**
  
 ![screenshot](documentation/UX/ux-modal-edit.png)
 
-- Here i have thoughts. For future features, i mention Diusqus for handeling comments. The use of a modal has its benifits, to follow the rest of the sites navigation. But, if there is a lot of comments moderation of them throgh this modal might break on smaller screens. This is somehing that must be handled in future versions. 
+- I have some thoughts on future features. One option is using Disqus for comment handling. While using a modal aligns with the site's navigation, moderating numerous comments within it might become challenging on smaller screens. This is an aspect to consider for future development iterations.
+
 
 - **Signed in / Not sign in visual key**
  
 ![screenshot](documentation/UX/ux-log1.png) ![screenshot](documentation/UX/ux-log2.png)
 
-- Knowing if you are signed in is important for the user, some elements, sign in / sign up changes to sign out, and create news depending if you are logged in or not, but as a new user a more stright forward method of knowing feelt right. 
+- Knowing if you are signed in is important for the user. Some elements change depending on whether you are logged in or not, such as "Sign In/Sign Up" changing to "Sign Out" and the ability to "Create News." However, as a new user, a more straightforward method of knowing your login status might feel more intuitive.
+
 
 ### Future Features
 
 - OpenGraph
-    - [Metas OpenGraph](https://opengraph.dev/) I wanted to incorporate Metas functions for scraping relevant information when you add a link, for a more streamlined content creation. You as a user would be able to paste you link to the story you wanted to share, and an image, ingress, and relevant information would be prestened automagicly. 
+    - [Metas OpenGraph](https://opengraph.dev/) I wanted to incorporate Meta's functions for scraping relevant information when you add a link, streamlining content creation. As a user, you would be able to paste your link to the story you want to share, and an image, ingress, and relevant information would be presented automagicly. 
+
 - Disqus
     - [Disqus integration](https://disqus.com/) To make sure the comments are propperly handled, with comment trees and more versitile functions, the use of Disqus would be very beneficial. 
+
+- Dynamic header images for Detail page
+    - I really wanted to use the News Posts image to show in the header for each post. But i could not find an easy way of doing this. The info i found was not a solution for me. I wanted to have it done in css. 
+    - [StackOverflow 1](https://stackoverflow.com/questions/34513654/how-do-you-dynamically-display-images-in-django) [StackOverflow 2](https://stackoverflow.com/questions/37574585/django-insert-image-in-a-template-whose-path-is-dynamic)
 
 
 ## Tools & Technologies Used
@@ -280,8 +291,10 @@ This combination aims to create a more engaging and dynamic news experience whil
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [VSCode](https://code.visualstudio.com/) used for all local development.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [phind](https://www.phind.com/) used for tips and trix, a great way to make progress when stuck. 
+- [phind](https://www.phind.com/) used for tips and trix, a great way to make progress when stuck.
+- - [Gemini](https://gemini.google.com/) Used for spell check, and grammar for README and TESTING.
 - [PyDot](https://github.com/pydot/pydot) Used for creating ERD
 - [ckEditor](https://ckeditor.com/) Userd for admin-board and more advanced content creation.
 
@@ -517,7 +530,7 @@ Many-to-one:
 This is hard, this is almost harder than ERD. Spend two days. 
 https://github.com/users/zakenaio/projects/2
 
-![SCREENSHOT AGILE]()
+![SCREENSHOT AGILE](documentation/testing/agile.png)
 
 ### GitHub Projects
 
@@ -715,9 +728,6 @@ By understanding these differences and making the necessary adjustments, you can
 Sources for help. 
 
 ### Content
-
-ADD MORE! 
-Sources for real code, images, links etc. 
 
 | Source | Location | Notes |
 | --- | --- | --- |
