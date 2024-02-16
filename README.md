@@ -222,34 +222,40 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 
 - **Sign In Modal**
-- 
+ 
 ![Sign in Modal](documentation/UX/ux-modal-signin.png)
-    - Using modals for most of the functions, as signing in feelt like the best idea, it removes complexity for the user. 
+
+- Using modals for most of the functions, as signing in feelt like the best idea, it removes complexity for the user. 
 
 - **Sign Up Modal**
-- 
+
 ![screenshot](documentation/UX/ux-modal-signup.png)
-    - Same with signing up, as a user you know exactly where you are and there is no need to go back and fourth throgh pages. 
+
+- Same with signing up, as a user you know exactly where you are and there is no need to go back and fourth throgh pages. 
 
 - **Sign Out Modal**
-- 
+
 ![screenshot](documentation/UX/ux-modal-signout.png)
-    - Signing out with a modal follows the rest of the rules for navigation. 
+
+- Signing out with a modal follows the rest of the rules for navigation. 
 
 - **Create News Modal**
-- 
+
 ![screenshot](documentation/UX/ux-modal-create.png)
-    - Even here, a modal works the best, it fits well on screen, and it follows the rest of the site.
+
+- Even here, a modal works the best, it fits well on screen, and it follows the rest of the site.
 
 - **Edit News Modal**
-- 
+ 
 ![screenshot](documentation/UX/ux-modal-edit.png)
-    - Here i have thoughts. For future features, i mention Diusqus for handeling comments. The use of a modal has its benifits, to follow the rest of the sites navigation. But, if there is a lot of comments moderation of them throgh this modal might break on smaller screens. This is somehing that must be handled in future versions. 
+
+- Here i have thoughts. For future features, i mention Diusqus for handeling comments. The use of a modal has its benifits, to follow the rest of the sites navigation. But, if there is a lot of comments moderation of them throgh this modal might break on smaller screens. This is somehing that must be handled in future versions. 
 
 - **Signed in / Not sign in visual key**
-- 
+ 
 ![screenshot](documentation/UX/ux-log1.png) ![screenshot](documentation/UX/ux-log2.png)
-    - Knowing if you are signed in is important for the user, some elements, sign in / sign up changes to sign out, and create news depending if you are logged in or not, but as a new user a more stright forward method of knowing feelt right. 
+
+- Knowing if you are signed in is important for the user, some elements, sign in / sign up changes to sign out, and create news depending if you are logged in or not, but as a new user a more stright forward method of knowing feelt right. 
 
 ### Future Features
 
