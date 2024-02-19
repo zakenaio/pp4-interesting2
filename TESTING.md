@@ -66,14 +66,14 @@ MUST TEST BROWSERS! MUJMUJIMPORTANTE
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | Popular News | Detail | Modals | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Chrome macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
-| Brave Win | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
-| Brave Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
-| Safari macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
-| FireFox macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
-| FireFox Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| Browser | Home | Popular News | Detail | Modals Sign out | Modals Signed In | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Edge Windows11 | [![Edge Win Home](https://i.gyazo.com/364147359c8ac960cb223e95de4ee30d.jpg)](https://gyazo.com/364147359c8ac960cb223e95de4ee30d) | [![Edge Win Popular](https://i.gyazo.com/7c360a6c0a382b6278a3458880804c49.jpg)](https://gyazo.com/7c360a6c0a382b6278a3458880804c49) | [![Edge Win Detail](https://i.gyazo.com/290eaa5c6dd6b4bf226eaad22091dae7.jpg)](https://gyazo.com/290eaa5c6dd6b4bf226eaad22091dae7) | [![Edge Win Sign Up Modal](https://i.gyazo.com/706146989e7fc8c7d51e4a402d0f2a5b.png)](https://gyazo.com/706146989e7fc8c7d51e4a402d0f2a5b) [![Edge Win Sign in Modal](https://i.gyazo.com/fbdcd053f1a512469a8dc1938899bbd3.png)](https://gyazo.com/fbdcd053f1a512469a8dc1938899bbd3) | --- | Works as expected |
+| Brave Windows11 | [![Brave Win Home](https://i.gyazo.com/028c921053a733e831f2ac72f831fd95.jpg)](https://gyazo.com/028c921053a733e831f2ac72f831fd95) | [![Brave Win Popular](https://i.gyazo.com/338ecf62c5aeb1ba9eaee948bac321f5.jpg)](https://gyazo.com/338ecf62c5aeb1ba9eaee948bac321f5) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| Brave Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| Safari macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| FireFox macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| FireFox Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
 
 
 ## Responsiveness
@@ -113,54 +113,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-THIS! SHOW YOUR OSINT/XSS AND LONG NIGHTS WITH BURPSUITE
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
 | Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature01.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature02.png) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature03.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature04.png) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature05.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature06.png) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/feature07.png) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/feature08.png) |
-| repeat for all remaining pages | x | x | x | x | x |
+
 
 MAYBE JUST USE THE ABOVE! 
 
