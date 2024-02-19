@@ -163,13 +163,16 @@ DONT FORGET THIS!
 
 ## Database tests 
 Creating News test. 
+
 ![Test of creating a post](documentation/testing/test-create-news-post.png) 
 ![Test of creating a post](documentation/testing/test-create-news-post-get.png) 
 
 Login test. 
+
 ![Login test](documentation/testing/test-login-post-get.png) 
 
 Vote system test.
+
 ![Vote systemt](documentation/testing/test-vote-post.png) 
 
 ## Bugs
@@ -180,7 +183,7 @@ During the development i encountered several bugs and problems, during developme
 
 I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
 
-![Form errors](documentation/testing/testing/test-form-error.png)
+![Form errors](documentation/testing/test-form-error.png)
 Make sure you do your js the right way!
 
 ![Edit errors](documentation/testing/test-form-input.png) 
