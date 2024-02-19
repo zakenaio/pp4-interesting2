@@ -48,11 +48,11 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-| File | GitHub UR | Screenshot | Notes |
+| File | GitHub URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | interesting/admin.py | URL | ![screenshot](documentation/testing/pep8-asgi.png) |  |
-| interesting/settings.py | URL | ![screenshot](documentation/testing/pep8-settings.png) |  |
-| interesting/urls.py | URL | ![screenshot](documentation/testing/pep8-urls2.png) |  |
+| interesting/settings.py | URL | ![screenshot](documentation/testing/pep8-settings.png) | used # noqa for long lines on five places, all regarding long lines as secret-keys and such. |
+| interesting/urls.py | URL | ![screenshot](documentation/testing/pep8-urls2.png) | used # noqa for long lines once.  |
 | news/admin.py | URL | ![screenshot](documentation/testing/pep8-admin.png) |  |
 | news/apps.py | URL | ![screenshot](documentation/testing/pep8-apps.png) |  |
 | news/context_processors.py | URL | ![screenshot](documentation/testing/pep8-cont.png) |  |
@@ -66,15 +66,15 @@ MUST TEST BROWSERS! MUJMUJIMPORTANTE
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | About | Contact | etc | Notes |
+| Browser | Home | Popular News | Detail | Modals | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave-home.png) | ![screenshot](documentation/browser-brave-about.png) | ![screenshot](documentation/browser-brave-contact.png) | ![screenshot](documentation/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera-home.png) | ![screenshot](documentation/browser-opera-about.png) | ![screenshot](documentation/browser-opera-contact.png) | ![screenshot](documentation/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Chrome macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| Brave Win | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| Brave Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| Safari macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| FireFox macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+| FireFox Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | Works as expected |
+
 
 ## Responsiveness
 
@@ -84,14 +84,14 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Home | About | Contact | etc | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Desktop | ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | Works as expected |
+| Macbook | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | Works as expected |
+| Tablet | ![screenshot](documentation/testing/comp/tablet1.png) | ![screenshot](documentation/testing/comp/tablete2.png) | ![screenshot](documentation/testing/comp/tablet3.png) | ![screenshot](documentation/testing/comp/tablet4.png) | Works as expected |
+| Pixel 7 pro | ![screenshot](documentation/testing/comp/p7p1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) | Works as expected |
+| Sony 1II | ![screenshot](documentation/testing/comp/sony1.png) | ![screenshot](documentation/testing/comp/sony2.png) | ![screenshot](documentation/testing/comp/sony3.png) | ![screenshot](documentation/testing/comp/sony4.png) | Works as expected |
+| Devtools Small | ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) | Works as expected |
+| Devtools Medium | ![screenshot](documentation/testing/comp/devmed1.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | Works as expected |
+| Devtools Large | ![screenshot](documentation/testing/comp/devlarge1.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | Works as expected |
 
 ## Lighthouse Audit
 
