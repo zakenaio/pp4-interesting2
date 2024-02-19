@@ -163,33 +163,33 @@ DONT FORGET THIS!
 
 ## Database tests 
 Creating News test. 
-![Test of creating a post](testing/test-create-news-post.png) 
-![Test of creating a post](testing/test-create-news-post-get.png) 
+![Test of creating a post](documentation/testing/test-create-news-post.png) 
+![Test of creating a post](documentation/testing/test-create-news-post-get.png) 
 
 Login test. 
-![Login test](testing/test-login-post-get.png) 
+![Login test](documentation/testing/test-login-post-get.png) 
 
 Vote system test.
-![Vote systemt](testing/test-vote-post.png) 
+![Vote systemt](documentation/testing/test-vote-post.png) 
 
 ## Bugs
 
 During the development i encountered several bugs and problems, during development i seldome remember to take a screenshot, I just try to solve it, so if its just frontend glitches, or backend. 
 
-![Package errors](testing/test-cloudinary-error.png) 
+![Package errors](documentation/testing/test-cloudinary-error.png) 
 
 I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
 
-![Form errors](testing/test-form-error.png)
+![Form errors](documentation/testing/testing/test-form-error.png)
 Make sure you do your js the right way!
 
-![Edit errors](test-form-input.png) 
+![Edit errors](documentation/testing/test-form-input.png) 
 The function to prepopulate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
 The differance between using {%  or {{ was something i apparently found harder than i first thoght. 
 This was also triggered by puting for loops and endfor in the wrong div.
 
 
-![Package errors](testing/test-cloudinary-error.png) 
+
 
 
 
