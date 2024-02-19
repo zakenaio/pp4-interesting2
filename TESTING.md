@@ -127,15 +127,6 @@ MAYBE JUST USE THE ABOVE!
 | Home | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
 | Sign Up | | | | |
 | | Click on Sign Up button | Redirection to Sign Up page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
@@ -169,9 +160,39 @@ DONT FORGET THIS!
 | As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
 | repeat for all remaining user stories | x |
 
+
+## Database tests 
+Creating News test. 
+![Test of creating a post](testing/test-create-news-post.png) 
+![Test of creating a post](testing/test-create-news-post-get.png) 
+
+Login test. 
+![Login test](testing/test-login-post-get.png) 
+
+Vote system test.
+![Vote systemt](testing/test-vote-post.png) 
+
 ## Bugs
 
-SCREENS OF BUGS! 
+During the development i encountered several bugs and problems, during development i seldome remember to take a screenshot, I just try to solve it, so if its just frontend glitches, or backend. 
+
+![Package errors](testing/test-cloudinary-error.png) 
+
+I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
+
+![Form errors](testing/test-form-error.png)
+Make sure you do your js the right way!
+
+![Edit errors](test-form-input.png) 
+The function to prepopulate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
+The differance between using {%  or {{ was something i apparently found harder than i first thoght. 
+This was also triggered by puting for loops and endfor in the wrong div.
+
+
+![Package errors](testing/test-cloudinary-error.png) 
+
+
+
 
 ### GitHub **Issues**
 
