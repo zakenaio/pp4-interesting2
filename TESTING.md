@@ -68,13 +68,11 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Home | Popular News | Detail | Modals Signed out | Modals Signed In | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| Edge Windows11 | [![Edge Win Home](https://i.gyazo.com/364147359c8ac960cb223e95de4ee30d.jpg)](https://gyazo.com/364147359c8ac960cb223e95de4ee30d) | [![Edge Win Popular](https://i.gyazo.com/7c360a6c0a382b6278a3458880804c49.jpg)](https://gyazo.com/7c360a6c0a382b6278a3458880804c49) | [![Edge Win Detail](https://i.gyazo.com/290eaa5c6dd6b4bf226eaad22091dae7.jpg)](https://gyazo.com/290eaa5c6dd6b4bf226eaad22091dae7) | [![Edge Win Sign Up Modal](https://i.gyazo.com/706146989e7fc8c7d51e4a402d0f2a5b.png)](https://gyazo.com/706146989e7fc8c7d51e4a402d0f2a5b) [![Edge Win Sign in Modal](https://i.gyazo.com/fbdcd053f1a512469a8dc1938899bbd3.png)](https://gyazo.com/fbdcd053f1a512469a8dc1938899bbd3) | [![Edge Win Sign out Modal](https://i.gyazo.com/4fe6f9ab95d202c8e29ab83c6095ef0e.jpg)](https://gyazo.com/4fe6f9ab95d202c8e29ab83c6095ef0e) [![Edge win Create Modal](https://i.gyazo.com/cf2a932279362eb1f6b264fc64c40911.jpg)](https://gyazo.com/cf2a932279362eb1f6b264fc64c40911) | Works as expected |
-| Brave Windows11 | [![Brave Win Home](https://i.gyazo.com/028c921053a733e831f2ac72f831fd95.jpg)](https://gyazo.com/028c921053a733e831f2ac72f831fd95) | [![Brave Win Popular](https://i.gyazo.com/338ecf62c5aeb1ba9eaee948bac321f5.jpg)](https://gyazo.com/338ecf62c5aeb1ba9eaee948bac321f5) | [![Brave Win Detail](https://i.gyazo.com/026c059e8c944a0a4377b8cefc8ba516.jpg)](https://gyazo.com/026c059e8c944a0a4377b8cefc8ba516) | [![Brave Win Sign up Modal](https://i.gyazo.com/96dadf11096c8fe62d566c0be0158223.jpg)](https://gyazo.com/96dadf11096c8fe62d566c0be0158223) [![Brave Win Sign in Modal](https://i.gyazo.com/edb4d379dc23ca4eb984c928c0219c08.jpg)](https://gyazo.com/edb4d379dc23ca4eb984c928c0219c08) | [![Brave Win Sign out Modal](https://i.gyazo.com/d32e30562f3de5672f3e299b07a5b2cd.png)](https://gyazo.com/d32e30562f3de5672f3e299b07a5b2cd) [![Brave Win Create Modal](https://i.gyazo.com/571ff3fef058e2190df3a3db085af8c9.jpg)](https://gyazo.com/571ff3fef058e2190df3a3db085af8c9) | Works as expected |
-| Brave Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
-| Safari macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
-| FireFox macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| Edge Windows11 | ![Edge Win Home](documentation/testing/browsers/edgewinhome.jpg) | ![Edge Win Popular](documentation/testing/browsers/edgewinpop.png) | ![Edge Win Detail](documentation/testing/browsers/edgewindetail.jpg) | ![Edge Win Sign Up Modal](documentation/testing/browsers/edgewinup.png) ![Edge Win Sign in  Modal](documentation/testing/browsers/edgewinin.png)  |  ![Edge Win Sign out Modal](documentation/testing/browsers/edgewinout.png) ![Edge win Create Modal](documentation/testing/browsers/edgewincreate.jpg) ![Edge win Edit Modal](documentation/testing/browsers/edgewinedit.jpg) | Works as expected |
+| Brave Windows11 | ![Brave Win Home](documentation/testing/browsers/) | ![Brave Win Popular](documentation/testing/browsers/bravewinpop) | ![Brave Win Detail](documentation/testing/browsers/bravewindetail.jpg) | ![Brave Win Sign up Modal](documentation/testing/browsers/bravewinup.png) ![Brave Win Sign in Modal](documentation/testing/browsers/bravewinin.jpg) | [![Brave Win Sign out Modal](documentation/testing/browsers/bravewinout.png) ![Brave Win Create Modal](documentation/testing/browsers/bravewincreate.jpg) | Works as expected |
+| Safari macOS | ![screenshot](documentation/testing/browsers/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
+| Brave macOS | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
 | FireFox Linux | ![screenshot](documentation/testing/comp/chrome1.png) | ![screenshot](documentation/testing/comp/chrome2.png) | ![screenshot](documentation/testing/comp/chrome3.png) | ![screenshot](documentation/testing/comp/chrome4.png) | --- | Works as expected |
-
 
 ## Responsiveness
 
@@ -184,9 +182,11 @@ During the development i encountered several bugs and problems, during developme
 I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
 
 ![Form errors](documentation/testing/test-form-error.png)
+
 Make sure you do your js the right way!
 
 ![Edit errors](documentation/testing/test-form-input.png) 
+
 The function to prepopulate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
 The differance between using {%  or {{ was something i apparently found harder than i first thoght. 
 This was also triggered by puting for loops and endfor in the wrong div.
