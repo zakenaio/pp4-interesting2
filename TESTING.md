@@ -62,8 +62,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Browser Compatibility
 
-MUST TEST BROWSERS! MUJMUJIMPORTANTE
-
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | Popular News | Detail | Modals Signed out | Modals Signed In | Notes |
@@ -76,20 +74,33 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-MUST TEST ON REAL AND DEVTOOLS! 
-
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Desktop | ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | Works as expected |
-| Macbook | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | Works as expected |
-| Tablet | ![screenshot](documentation/testing/comp/tablet1.png) | ![screenshot](documentation/testing/comp/tablete2.png) | ![screenshot](documentation/testing/comp/tablet3.png) | ![screenshot](documentation/testing/comp/tablet4.png) | Works as expected |
-| Pixel 3 | ![screenshot](documentation/testing/comp/pixel1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) | Works as expected |
-| iPhone X | ![screenshot](documentation/testing/comp/iphonex1.png) | ![screenshot](documentation/testing/comp/iphonex2.png) | ![screenshot](documentation/testing/comp/iphonex3.png) | ![screenshot](documentation/testing/comp/iphonex4.png) | Works as expected |
-| Devtools Small | ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) | Works as expected |
-| Devtools Medium | ![screenshot](documentation/testing/comp/devmed1.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | Works as expected |
-| Devtools Large | ![screenshot](documentation/testing/comp/devlarge1.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | Works as expected |
+| Device | Home | Popular | Details | Modal | Modal | Modal |
+| --- | --- | --- | --- | --- | --- | --- |
+| Desktop |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| Notes |  |  |  |  |  |  |
+| Macbook |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| Notes |  |  |  |  |  |  |
+| Tablet DEV |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| Notes |  |  |  |  |  |  |
+| Pixel 3 DEV |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/pixel1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) |
+| Notes |  |  |  |  |  |  |
+| iPhone X DEV  |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/iphonex1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
+| Notes |  |  |  |  |  |  |
+| Devtools Small  |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
+| Notes |  |  |  |  |  |  |
+| Devtools Medium  |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devmed1.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | 
+| Notes |  |  |  |  |  |  |
+| Devtools Large  |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devlarge1.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | 
 
 ## Lighthouse Audit
 
