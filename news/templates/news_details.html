@@ -51,9 +51,9 @@
                 <div class="row post-footer">
                     <div class="col-6 category-btn">
                         <span class="{{ post.category.name }}-span">{{ post.category.name }}</span>
-                        {% if user.is_authenticated %}
+                        {% if user.is_authenticated and post.author == user or user.is_superuser %}
                         <button data-bs-toggle="modal" data-bs-target="#editPostModal-{{ post.slug }}"
-                            class="btn btn-primary">Edit</button>
+                            class="btn btn-edit btn-primary">Edit</button>
                         {% endif %}
                     </div>
                     <div class="col-6 social-btn">

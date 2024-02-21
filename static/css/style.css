@@ -220,6 +220,7 @@ h3 a {
 }
 
 .politics-span {
+    height: 30px;
     background-color: rgb(255, 253, 119);
     color: black;
     border-radius: 10px;
@@ -229,6 +230,7 @@ h3 a {
 }
 
 .economy-span {
+    height: 30px;
     background-color: rgb(118, 232, 247);
     color: black;
     border-radius: 10px;
@@ -237,6 +239,7 @@ h3 a {
 }
 
 .music-span {
+        height: 30px;
     background-color: rgb(168, 118, 247);
     color: black;
     border-radius: 10px;
@@ -245,6 +248,7 @@ h3 a {
 }
 
 .space-span {
+    height: 30px;
     background-color: rgb(247, 202, 118);
     color: black;
     border-radius: 10px;
@@ -253,6 +257,7 @@ h3 a {
 }
 
 .sports-span {
+    height: 30px;
     background-color: rgb(184, 79, 152);
     color: black;
     border-radius: 10px;
@@ -260,6 +265,12 @@ h3 a {
     font-size: .8em;
 }
 
+.btn-edit {
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: .8em;
+}
 
 /* POST FOOTER - SOCIAL */
 .post-footer {
