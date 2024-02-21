@@ -76,7 +76,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | Popular | Details | Modal | Modal | Modal |
+| Home | Popular | Footer | Details | Modal | Modal | Modal |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Desktop 1440p** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
