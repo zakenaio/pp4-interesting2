@@ -31,9 +31,15 @@
                     </div>
                     <div class="col-lg-3 col-md-12 flex-end">
                         <div class="profile-image-div">
-                            {% if post.author.profile.avatar.url %}
-                                <img src="{{ post.author.profile.avatar.url }}" class="profile-image" alt="author's face">
+
+                            {% if post.author.profile.avatar and post.author.profile.avatar.url %}
+                            <img src="{{ post.author.profile.avatar.url }}" class="profile-image"
+                                alt="{{ post.author.username }}">
+                            {% else %}
+                            <img src="{% static 'images/avatar.jpg' %}" class="profile-image"
+                                alt="default user">
                             {% endif %}
+                            
                         </div>
                         <div class="auth-div">
                             <h5 class="auth">{{ post.author.username }}</h5>
@@ -43,12 +49,12 @@
                 </div>
                 <div class="row">
                     <div class="content">
-                        
+
                         <!-- ARTICLE IMAGE VIA CLOUDINARY -->
                         {% if post.featured_image %}
                         <img class="img" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                         {% endif %}
-                            {{ post.content | safe }}
+                        {{ post.content | safe }}
                     </div>
 
 

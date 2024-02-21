@@ -34,11 +34,11 @@
                 <div class="row auth-div">
                     <div class="profile-image-div">
 
-                        {% if "avatar" in post.avatar.url %}
-                        <img class="card-img-top" src="{% static 'images/avatar.jpg' %}" alt="avatar image">
-                        {% else %}
+                        {% if post.author.profile.avatar and post.author.profile.avatar.url %}
                         <img src="{{ post.author.profile.avatar.url }}" class="profile-image-details"
-                            alt="author's face">
+                            alt="{{ post.author.username }}">
+                        {% else %}
+                        <img src="{% static 'images/avatar.jpg' %}" class="profile-image-details" alt="default user">
                         {% endif %}
 
                     </div>
@@ -123,6 +123,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    {% if user.is_authenticated and user == post.author or user.is_superuser %}
                     <!-- EDIT -->
                     <form method="post" action="{% url 'edit_news' slug=post.slug %}" enctype="multipart/form-data">
                         {% csrf_token %}
@@ -138,6 +139,7 @@
                     </form>
                     <!-- DELETE -->
                     <hr>
+                    {% endif %}
                     <h5>Comments</h5>
                     {% for comment in comments %}
                     <div class="row">
@@ -145,10 +147,12 @@
                             <p class="auth">{{ comment.author_name }}</p>
                         </div>
                         <div class="col-4">
+                            {% if user.is_authenticated and user == comment.author or user.is_superuser %}
                             <form method="post" action="{% url 'delete_comment' comment.id %}">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-danger btn-sm">Delete Comment</button>
                             </form>
+                            {% endif %}
                         </div>
                         <div class="col-12">
                             <p>{{ comment.text }}</p>
@@ -160,7 +164,7 @@
             </div>
         </div>
     </div>
-</main>
 
+</main>
 
 {% endblock %}
