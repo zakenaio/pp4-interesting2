@@ -108,7 +108,7 @@
                                     Forgot your password?</a></span>
                         </h5>
                         <br>
-                        <button type="submit" class="btn btn-outline-success">
+                        <button type="submit" class="btn btn-success">
                             Sign In
                         </button>
                     </form>
@@ -192,7 +192,7 @@
                         <li>Your password can’t be entirely numeric.</li>
                     </ul>
 
-                    <button type="submit" class="btn btn-outline-success">
+                    <button type="submit" class="btn btn-success">
                         Sign Up
                     </button>
 
@@ -220,7 +220,7 @@
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <button class="btn btn-outline-warning right" type="submit">{% trans 'Sign Out' %}</button>
+                        <button class="btn btn-warning right" type="submit">{% trans 'Sign Out' %}</button>
                     </form>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                     <form method="post" action="{% url 'create_news' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ news_post_form.as_p }}
-                        <button type="submit" class="btn btn-outline-success">Create Post</button>
+                        <button type="submit" class="btn btn-success">Create Post</button>
                     </form>
 
                 </div>
