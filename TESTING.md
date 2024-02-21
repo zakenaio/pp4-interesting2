@@ -78,29 +78,29 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 | Device | Home | Popular | Details | Modal | Modal | Modal |
 | --- | --- | --- | --- | --- | --- | --- |
-| Desktop |  |  |  |  |  |  |
+| **Desktop 1440p** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
 | Notes |  |  |  |  |  |  |
-| Macbook |  |  |  |  |  |  |
+| **Macbook 16"** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
 | Notes |  |  |  |  |  |  |
-| Tablet DEV |  |  |  |  |  |  |
+| **Tablet DEV** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
 | Notes |  |  |  |  |  |  |
-| Pixel 3 DEV |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/pixel1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) |
+| **Pixel 3 DEV** |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/pixel3home.png) | ![screenshot](documentation/testing/comp/pixel3pop.png) | ![screenshot](documentation/testing/comp/pixel3footer.png) | ![screenshot](documentation/testing/comp/pixel1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) |
 | Notes |  |  |  |  |  |  |
-| iPhone X DEV  |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/iphonex1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
+| **iPhone X DEV** |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/iphonexhome.png) | ![screenshot](documentation/testing/comp/iphonexpop.png) | ![screenshot](documentation/testing/comp/iphonexfooter.png) | ![screenshot](documentation/testing/comp/iphonex1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
 | Notes |  |  |  |  |  |  |
-| Devtools Small  |  |  |  |  |  |  |
+| **Devtools Small**  |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/devsmall1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
 | Notes |  |  |  |  |  |  |
-| Devtools Medium  |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devmed1.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | 
+| **Devtools Medium** |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devmediumhome.png) | ![screenshot](documentation/testing/comp/devmediumpop.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | 
 | Notes |  |  |  |  |  |  |
-| Devtools Large  |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devlarge1.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | 
+| **Devtools Large** |  |  |  |  |  |  |
+| ![screenshot](documentation/testing/comp/devlargehome.png) | ![screenshot](documentation/testing/comp/devlargepop.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | 
 
 ## Lighthouse Audit
 
