@@ -4,13 +4,12 @@
 
 {% block content %}
 
-<header class="header-post">
+<header class="header-post" {% if post.featured_image %} style="background-image: url('{{ post.featured_image.url }}'); background-size: cover; background-position: center; background-repeat: no-repeat;" {% endif %}>
     <div class="container">
         <div class="col-md-10 mx-auto text-center">
             <h1 class="hero-text-details text-shadow">{{ post.title }}</h1>
         </div>
     </div>
-
 </header>
 
 <main>

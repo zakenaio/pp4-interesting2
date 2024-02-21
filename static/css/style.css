@@ -64,6 +64,7 @@ header {
 
 /* HEADER POST DETAILS */
 .header-post {
+    position: relative;
     height: 40vh;
     background-image: url(https://images.pexels.com/photos/4906419/pexels-photo-4906419.jpeg);
     background-attachment: fixed;
@@ -72,6 +73,17 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.header-post::after {
+    content: '';
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    pointer-events: none;
 }
 
 /* COLORS - SIZES */ 
@@ -106,6 +118,7 @@ h3 a {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+    z-index: 1000;
 }
 
 /* COLORS AND ALIGN HERO BASE */
@@ -475,6 +488,7 @@ footer i {
     -moz-transform: translateX(-50%) translateY(50%);
     -ms-transform: translateX(-50%) translateY(50%);
     -o-transform: translateX(-50%) translateY(50%);
+    z-index: 1999;
 }
 
 .flex-end {

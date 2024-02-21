@@ -42,7 +42,7 @@ $('.comment-form').on('submit', function (event) {
             // Display the success message with SweetAlert2
             Swal.fire({
                 title: 'Success!',
-                text: 'Your comment has been added successfully.',
+                text: 'Your comment has been added successfully, to view it you need to reload the page for now.',
                 icon: 'success',
                 confirmButtonText: 'Cool'
             });
