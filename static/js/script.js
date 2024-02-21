@@ -39,12 +39,28 @@ $('.comment-form').on('submit', function (event) {
             $('.comments-list').append('<li>' + response.author_name + ': ' + response.text + '</li>');
             // Clear the form fields
             $('.comment-form')[0].reset();
+            // Display the success message with SweetAlert2
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your comment has been added successfully.',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            });
         },
         error: function (xhr, status, error) {
+            // Handle any errors
             console.error('Error:', error);
+            // Optionally, display an error message with SweetAlert2
+            Swal.fire({
+                title: 'Error!',
+                text: 'There was an error posting your comment.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
         }
     });
 });
+
 
 // Create News
 document.addEventListener('DOMContentLoaded', function() {

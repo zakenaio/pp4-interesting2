@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST
 
+
 # Local Django
 from .forms import CommentForm, NewsPostForm
 from .models import News_Post, Comment
@@ -20,12 +21,10 @@ def news_list(request):
 
 def news_details(request, slug):
     post = get_object_or_404(News_Post, slug=slug)
-    comments = post.comments.all()
     post_form = NewsPostForm(instance=post, prefix='post')
-    comment_form = CommentForm()
+    comment_form = CommentForm(request.POST or None)
 
     if request.method == 'POST':
-        comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
@@ -34,17 +33,16 @@ def news_details(request, slug):
             return redirect('news_details', slug=slug)
         else:
             messages.error(request, 'There was an error with your comment.')
-            return redirect('news_details', slug=slug)
 
-    comment_form = CommentForm()
-    template = 'news_details.html'
+    comments = post.comments.all() 
+
     context = {
         'post': post,
         'comments': comments,
         'comment_form': comment_form,
         'post_form': post_form,
     }
-    return render(request, template, context)
+    return render(request, 'news_details.html', context)
 
 
 @login_required

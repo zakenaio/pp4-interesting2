@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+
 <header class="header-post">
     <div class="container">
         <div class="col-md-10 mx-auto text-center">
@@ -86,11 +87,25 @@
 
                     <div class="col-lg-5  p-4">
                         <h2>Add a Comment</h2>
+
                         <form method="post" action="{% url 'news_details' slug=post.slug %}" class="comment-form">
-                            {% csrf_token %}
-                            {{ post_form.as_p }}
+                            <label for="author_name">Name:</label>
+                            <br>
+                            {% if user.is_authenticated %}
+                            <input type="text" id="author_name" name="author_name" value="{{ user.username }}" required>
+                            {% else %}
+                            <input type="text" id="author_name" name="author_name" required>
+                            {% endif %}
+                            <br>
+                            <br>
+                            <label for="text">Comment:</label>
+                            <br>
+                            <textarea id="text" name="text"></textarea>
+                            <br>
+                            <br>
                             <input type="submit" class="btn btn-outline-success" value="Add Comment">
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -146,4 +161,6 @@
         </div>
     </div>
 </main>
+
+
 {% endblock %}
