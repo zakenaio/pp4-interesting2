@@ -79,7 +79,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Home | Popular | Footer | Details | Modal | Modal | Modal |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Desktop 1440p** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/desktop1.png) | ![screenshot](documentation/testing/comp/desktop2.png) | ![screenshot](documentation/testing/comp/desktop3.png) | ![screenshot](documentation/testing/comp/desktop4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetails.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsucc.png) |
 | Notes |  |  |  |  |  |  |
 | **Macbook 16"** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
@@ -124,9 +124,10 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Page | Expectation | Test | Result | Fix | Screenshot |
+| Funtion | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
+| Edit | User can only edit its own posts | If not logged in, no edit button apear. | Logged in, Button apear, only on your posts.| | ![Edit button on users post](documentation/testing/loggededitrestict.png) |
+|  | | | | | |
 
 
 MAYBE JUST USE THE ABOVE! 

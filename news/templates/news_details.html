@@ -146,7 +146,7 @@
                             <p class="auth">{{ comment.author_name }}</p>
                         </div>
                         <div class="col-4">
-                            {% if user.is_authenticated and user == comment.author or user.is_superuser %}
+                            {% if user.is_authenticated %}
                             <form method="post" action="{% url 'delete_comment' comment.id %}">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-danger btn-sm">Delete Comment</button>
