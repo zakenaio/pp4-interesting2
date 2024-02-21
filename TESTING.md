@@ -79,7 +79,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Home | Popular | Footer | Details | Modal | Modal | Modal |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Desktop 1440p** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetails.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsucc.png) |
+| ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetail.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsucc.png) |
 | Notes |  |  |  |  |  |  |
 | **Macbook 16"** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
