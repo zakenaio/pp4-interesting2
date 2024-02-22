@@ -505,7 +505,6 @@ Many-to-one:
 
 ## Agile Development Process
 
-This is hard, this is almost harder than ERD. Spend two days. 
 https://github.com/users/zakenaio/projects/2
 
 ![SCREENSHOT AGILE](documentation/testing/agile.png)
@@ -515,9 +514,9 @@ https://github.com/users/zakenaio/projects/2
 [GitHub Projects](https://github.com/zakenaio/pp4-interesting2/projects) served as an Agile tool for this project.
 It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, user stories, issues, and development tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](documentation/testing/gh-projects.png)
+![Screenshot Roadmap](documentation/testing/gh-projects.png)
 
 ### MoSCoW Prioritization
 
@@ -712,9 +711,14 @@ Sources for help.
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 | [Gyazo](https://gyazo.com/) | README and TESTING | Tool for creating gif-screenshoots | 
-|  | Code sources |  |
+| Code sources |  |  |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | Entire site | responsive HTML/CSS/JS navbar |
-| [StackOverflow](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) | Entire site | making the navmenu fade |
+| [StackOverflow - Menu fade](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) | Entire site | making the navmenu fade, also for the arrow |
+| [SweetAlert](https://sweetalert.js.org/) | Entire site |  Used for crud alerts |
+| [StackOverflow - Votes](https://stackoverflow.com/questions/3722874/jquery-voting-system?rq=1) | Entire site | --- |
+| [StackOwerFlow - Votes](https://stackoverflow.com/questions/3604953/ajax-php-voting-system?rq=1) | Entire site | --- |
+
+
 
 ### Media
 
