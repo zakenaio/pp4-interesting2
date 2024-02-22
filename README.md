@@ -94,25 +94,18 @@ Explain colours.
 <summary> Click here to see the Mobile Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/wire-mobile-home.png)
 
-Top Rated
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+Popular News
+  - ![screenshot](documentation/wireframes/wire-mobile-pop.png)
 
-Modal Sign Up 
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+News Detail 
+  - ![screenshot](documentation/wireframes/wire-mobile-detail.png)
 
-Modal Sign In
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+Modal Placement
+  - ![screenshot](documentation/wireframes/wire-mobile-mod.png)
 
-Modal Sign Out 
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
 
-Modal Create News 
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
-
-Modal Edit News
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
 
 
 
@@ -124,25 +117,16 @@ Modal Edit News
 <summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![screenshot](documentation/wireframes/wire-tablet-home.png)
 
-Top Rated
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+Popular News
+  - ![screenshot](documentation/wireframes/wire-tablet-pop.png)
 
-Modal Sign Up 
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
+News Detail 
+  - ![screenshot](documentation/wireframes/wire-tablet-detail.png)
 
-Modal Sign In
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
-
-Modal Sign Out 
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-Modal Create News 
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-Modal Edit News
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
+Modal Placement
+  - ![screenshot](documentation/wireframes/wire-tablet-mod.png)
 
 
 
@@ -154,25 +138,16 @@ Modal Edit News
 <summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/wire-desktop-home.png)
 
-Top Rated
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Popular News
+  - ![screenshot](documentation/wireframes/wire-desktop-pop.png)
 
-Modal Sign Up 
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+News Detail 
+  - ![screenshot](documentation/wireframes/wire-desktop-detail.png)
 
-Modal Sign In
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
-
-Modal Sign Out 
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
-
-Modal Create News 
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
-
-Modal Edit News
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+Modal Placement
+  - ![screenshot](documentation/wireframes/wire-tesktop-mod.png)
 
 </details>
 
@@ -294,9 +269,10 @@ This combination aims to create a more engaging and dynamic news experience whil
 - [VSCode](https://code.visualstudio.com/) used for all local development.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [phind](https://www.phind.com/) used for tips and trix, a great way to make progress when stuck.
-- - [Gemini](https://gemini.google.com/) Used for spell check, and grammar for README and TESTING.
+- [Gemini](https://gemini.google.com/) Used for spell check, and grammar for README and TESTING.
 - [PyDot](https://github.com/pydot/pydot) Used for creating ERD
-- [ckEditor](https://ckeditor.com/) Userd for admin-board and more advanced content creation.
+- [ckEditor](https://ckeditor.com/) Used for admin-board and more advanced content creation.
+- [SweetAlert](https://sweetalert.js.org/) Used for crud alerts.
 
 
 ## Database Design
