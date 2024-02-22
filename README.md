@@ -153,8 +153,6 @@ Modal Placement
 
 ## Features
 
-Explain features. Why modals, etc. 
-
 ### Modals
 ##### Why I chose modals:
 - **Simplified user experience:** Modals avoid page reloads, offering a smoother and faster experience for actions like editing data, confirming choices, or viewing previews. This keeps users engaged and focused on the task at hand.
@@ -246,9 +244,13 @@ This combination aims to create a more engaging and dynamic news experience whil
 - Disqus
     - [Disqus integration](https://disqus.com/) To make sure the comments are propperly handled, with comment trees and more versitile functions, the use of Disqus would be very beneficial. 
 
-- Dynamic header images for Detail page
+- Dynamic header images for Detail page.
     - I really wanted to use the News Posts image to show in the header for each post. But i could not find an easy way of doing this. The info i found was not a solution for me. I wanted to have it done in css. 
     - [StackOverflow 1](https://stackoverflow.com/questions/34513654/how-do-you-dynamically-display-images-in-django) [StackOverflow 2](https://stackoverflow.com/questions/37574585/django-insert-image-in-a-template-whose-path-is-dynamic)
+
+- VOTE restrictions.
+    - As of now, anyone can like/vote on a post as many times as they want. 
+    Not the best experience. 
 
 
 ## Tools & Technologies Used
