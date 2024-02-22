@@ -62,27 +62,22 @@ Explain colours.
 
 ### New Site Users
 
-- As a new site user, I would like to See the news, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to create and account, so that I can upload my own news.
+- As a new site user, I would like to not create an account, but still see news.
+- As a new site user, I would like to vote on news, so that I can show my support.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to login, so that I can remove my news.
+- As a returning site user, I would like to login, so that I can edit my news.
+- As a returning site user, I would like to login, so that I can remove comments on my news.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to login, so that I can edit all news.
+- As a site administrator, I should be able to login, so that I can create profiles.
+- As a site administrator, I should be able to login, so that I can remove users.
+- As a site administrator, I should be able to login, so that I can remove comments.
 
 ## Wireframes
 
@@ -715,8 +710,8 @@ Sources for help.
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | Entire site | responsive HTML/CSS/JS navbar |
 | [StackOverflow - Menu fade](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) | Entire site | making the navmenu fade, also for the arrow |
 | [SweetAlert](https://sweetalert.js.org/) | Entire site |  Used for crud alerts |
-| [StackOverflow - Votes](https://stackoverflow.com/questions/3722874/jquery-voting-system?rq=1) | Entire site | --- |
-| [StackOwerFlow - Votes](https://stackoverflow.com/questions/3604953/ajax-php-voting-system?rq=1) | Entire site | --- |
+| [StackOverflow - Votes](https://stackoverflow.com/questions/3722874/jquery-voting-system?rq=1) | Entire site | Very helpful |
+| [StackOverflow - Votes](https://stackoverflow.com/questions/3604953/ajax-php-voting-system?rq=1) | Entire site | Also very helpful, more or less the same |
 
 
 
