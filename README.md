@@ -184,7 +184,7 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 - **Menu - fade in/out**
 
-[![Menu fade]((https://i.gyazo.com/6da1d042916c83e8dc32542e2b35470e.gif)](https://gyazo.com/6da1d042916c83e8dc32542e2b35470e)
+[![Menu fade](https://i.gyazo.com/6da1d042916c83e8dc32542e2b35470e.gif)](https://gyazo.com/6da1d042916c83e8dc32542e2b35470e)
 
   - To avoid being too distracting, the menu has gained the ability to fade in and out based on your position on the screen using JavaScript. The fade-in animation itself is determined in the CSS.
   - [Scroll inspiration](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) using variations of different sources, but this whas the one i relied on most.
