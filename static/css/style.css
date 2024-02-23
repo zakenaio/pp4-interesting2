@@ -4,7 +4,7 @@
 body {
     margin: 0px;
     background-color: #919187;
-    color: #636363;
+    color: #2c2c2c;
     font-family: 'Barlow';
 }
 
@@ -101,12 +101,12 @@ a {
 h3 {
     font-size: 2.5em;
     text-transform: uppercase;
-    color: #636363;
+    color: #2c2c2c;
     margin-bottom: 40px;
 }
 
 h3 a {
-        color: #636363;
+        color: #2c2c2c;
 }
 
 .content-container {
@@ -163,21 +163,21 @@ h3 a {
 /* AUTHOR */
 .auth {
     text-transform: uppercase;
-    color: #636363;
+    color: #2c2c2c;
     font-size: 1em;
     font-weight: 600;
 }
 
 .auth-tag {
     text-transform: uppercase;
-    color: #636363;
+    color: #2c2c2c;
     font-size: 0.6em;
     margin-top: -8px;
 }
 
 .auth-details {
     text-transform: uppercase;
-    color: #636363;
+    color: #2c2c2c;
     font-size: 1.4em;
     font-weight: 600;
     margin-top: 5px;
@@ -186,7 +186,7 @@ h3 a {
 .auth-tag-d {
     text-transform: uppercase;
     text-align: end;
-    color: #636363;
+    color: #2c2c2c;
     font-size: 0.6em;
 }
 
@@ -447,7 +447,7 @@ footer i {
 /* MODALS */
 .modal-content {
     background-color: rgb(161, 161, 155);
-    color: #414237;
+    color: #2c2c2c;
 }
 
 .modal-header {
@@ -462,12 +462,30 @@ footer i {
 
 .modal-content p {
     font-size: 1em;
-    color: #414237;
+    color: #2c2c2c;
 }
 
 .edit-button  {
     margin-bottom: -40px;
     margin-top: 10px;
+}
+
+/* MODAL ERRORS */
+.loginError {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.errorlist p {
+    color: red; 
+    font-weight: bold;
+    margin: 5px 0; 
+    list-style-type: none; 
+}
+
+.errorlist li {
+    margin-bottom: 5px;
 }
 
 /* 404 */
@@ -507,4 +525,22 @@ footer i {
 
 .text-shadow {
     text-shadow: 0px 2px 15px black;
+}
+
+/* CRUD MESSAGES */
+.alerts-site {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeOut 2s 2s forwards;
+    z-index: 1999;
+}
+
+/* Fade out! */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

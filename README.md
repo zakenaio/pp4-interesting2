@@ -190,7 +190,7 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 
 - **Sign In Modal**
- 
+
 ![Sign in Modal](documentation/UX/ux-modal-signin.png)
 
 - Using modals for most of the functions, as signing in feelt like the best idea, it removes complexity for the user. 
@@ -218,14 +218,14 @@ This combination aims to create a more engaging and dynamic news experience whil
 
 
 - **Edit News Modal**
- 
+
 ![screenshot](documentation/UX/ux-modal-edit.png)
 
 - I have some thoughts on future features. One option is using Disqus for comment handling. While using a modal aligns with the site's navigation, moderating numerous comments within it might become challenging on smaller screens. This is an aspect to consider for future development iterations.
 
 
 - **Signed in / Not sign in visual key**
- 
+
 ![screenshot](documentation/UX/ux-log1.png) ![screenshot](documentation/UX/ux-log2.png)
 
 - Knowing if you are signed in is important for the user. Some elements change depending on whether you are logged in or not, such as "Sign In/Sign Up" changing to "Sign Out" and the ability to "Create News." However, as a new user, a more straightforward method of knowing your login status might feel more intuitive.
@@ -712,7 +712,7 @@ Sources for help.
 | [SweetAlert](https://sweetalert.js.org/) | Entire site |  Used for crud alerts |
 | [StackOverflow - Votes](https://stackoverflow.com/questions/3722874/jquery-voting-system?rq=1) | Entire site | Very helpful |
 | [StackOverflow - Votes](https://stackoverflow.com/questions/3604953/ajax-php-voting-system?rq=1) | Entire site | Also very helpful, more or less the same |
-
+| [CSS Fade Trasitions](https://blog.hubspot.com/website/css-fade-in#text-transition) | Entire site | Crud messages fade out to not distract |
 
 
 ### Media

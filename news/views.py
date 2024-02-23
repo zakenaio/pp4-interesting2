@@ -1,12 +1,9 @@
-# Django
+
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.decorators.http import require_POST
-
-
-# Local Django
 from .forms import CommentForm, NewsPostForm
 from .models import News_Post, Comment
 
@@ -53,8 +50,12 @@ def create_news(request):
             news_post = form.save(commit=False)
             news_post.author = request.user
             news_post.save()
+            messages.success(request, 'Your news has been added.')
             return redirect('news_details', slug=news_post.slug)
-    return JsonResponse({'error': "Invalid request"}, status=400)
+        else:
+            messages.error(request, 'There was an error with your news.')
+
+    return render(redirect(reverse('news_list')))
 
 
 @login_required
@@ -92,10 +93,6 @@ def delete_news(request, slug):
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
-    if not request.user.is_superuser:
-        messages.error(request, 'Only admins can perform this action')
-        return redirect('news_details', slug=comment.post.slug)
-
     comment.delete()
     messages.success(request, "Comment deleted successfully.")
     return redirect('news_details', slug=comment.post.slug)
@@ -105,7 +102,6 @@ def delete_comment(request, comment_id):
 def vote(request):
     post_slug = request.POST.get('slug')
     post = get_object_or_404(News_Post, slug=post_slug)
-
     # Increment the post's vote count and save it
     post.votes += 1
     post.save()

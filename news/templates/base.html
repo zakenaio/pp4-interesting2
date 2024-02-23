@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    
+
     {% load static %}
     {% load i18n %}
 
@@ -51,7 +51,7 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                        data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
+                            data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
                     </li>
 
                     <li class="nav-item">
@@ -61,18 +61,32 @@
                     {% else %}
 
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                             data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
             </div>
         </div>
     </nav>
+
+    {% if messages %}
+    <section id="alerts" class="alerts-site">
+        {% for msg in messages %}
+        <!-- all django message tags mirror bootstrap, except error/danger -->
+        <aside
+            class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center"
+            role="alert">
+            <h3>{{ msg }}</h3>
+        </aside>
+        {% endfor %}
+    </section>
+    {% endif %}
 
     {% block content %}
     {% endblock %}
@@ -88,7 +102,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="/accounts/login/">
+                    <p id="loginError" class="error-message"></p>
+                    <form method="post" action="{% url 'account_login' %}" id="loginForm">
                         {% csrf_token %}
                         <p>
                             <label for="id_login">Username:</label>
@@ -104,10 +119,6 @@
                             <label for="id_remember">Remember Me:</label>
                             <input type="checkbox" name="remember" id="id_remember">
                         </p>
-                        <h5>
-                            <span class="helptext"><a href="/accounts/password/reset/">
-                                    Forgot your password?</a></span>
-                        </h5>
                         <br>
                         <button type="submit" class="btn btn-success">
                             Sign In
@@ -133,12 +144,12 @@
 
                     <p>
                         Already have an account? Then please <a class="logged-text" aria-current="page"
-                        data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>.
+                            data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>.
                     </p>
-
+                    <ul class='errorlist'></ul>
                     <div class="row">
                         <div class="col-4 text-end">
-                            <form method="post" action="/accounts/signup/">
+                            <form method="post" action="{% url 'account_signup' %}" id="signupForm">
                                 {% csrf_token %}
                                 <p>
                                     <label for="id_username">Username:</label>
@@ -168,8 +179,8 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="password" name="password1" placeholder="Password"
-                                required="" id="id_password1">
+                            <input type="password" name="password1" placeholder="Password" required=""
+                                id="id_password1">
                             <span class="helptext"></span>
                         </div>
 
@@ -180,9 +191,9 @@
                         </div>
 
                         <div class="col-8">
-                            <input type="password" name="password2" placeholder="Password (again)"
-                                required="" id="id_password2">
-                            
+                            <input type="password" name="password2" placeholder="Password (again)" required=""
+                                id="id_password2">
+
                         </div>
 
                     </div>
@@ -213,9 +224,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
 
-        <p>{% trans 'Are you sure you want to sign out?' %}</p>
+
+                    <p>{% trans 'Are you sure you want to sign out?' %}</p>
                     <form method="post" action="{% url 'account_logout' %}">
                         {% csrf_token %}
                         {% if redirect_field_value %}
@@ -316,4 +327,5 @@
     </footer>
 
 </body>
+
 </html>

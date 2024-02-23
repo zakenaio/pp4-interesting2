@@ -240,11 +240,14 @@ Any remaining open issues can be tracked [here](https://github.com/zakenaio/pp4-
 
 | Bug | Status |
 | --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/zakenaio/pp4-interesting2/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/zakenaio/pp4-interesting2/issues/5) | Open |
+| --- | --- |
+
+
+ICON NOT ANIMATED IN CHROMIUM 
 
 ## Unfixed Bugs
 
 | Bug | Status |
 | --- | --- |
-| Using django links in some modals | Noticed that i had hardcoded links in some of my modals, after trying to fix the issue some of my modals broke, curtain faded but no modal was shown, i could not seem to resolve the issue at this point. | 
+| Using django links in some modals | Noticed that i had hardcoded links in some of my modals, after trying to fix the issue some of my modals broke, curtain faded but no modal was shown, i could not seem to resolve the issue at this point. |
+| User profile | The need for a profile page is huge, so the user can edit their profile image, and information. I did not manage. Got redirect errors, and authentication errors. | 

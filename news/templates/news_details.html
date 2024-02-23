@@ -88,6 +88,7 @@
                         <h2>Add a Comment</h2>
 
                         <form method="post" action="{% url 'news_details' slug=post.slug %}" class="comment-form">
+                            {% csrf_token %}
                             <label for="author_name">Name:</label>
                             <br>
                             {% if user.is_authenticated %}
