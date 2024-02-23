@@ -129,15 +129,15 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
 | Sign Up | | | | |
-| | Click on Sign Up button | Open Sign up Modal | Pass | GIF SCREEN |
+| | Click on Sign Up button | Open Sign up Modal | Pass | [![Sign Up Modal](https://i.gyazo.com/7eb6764de1329045c4446bbc6945d99d.gif)](https://gyazo.com/7eb6764de1329045c4446bbc6945d99d)|
 | | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | SCREEN |
+| | Enter valid password (twice) | Field will only accept password format | Pass | ![Wrong Credentials](documentation/testing/def-wrong-up.png) |
 | Sign In | | | | |
-| | Click on the Login link | Open Sign in Modal | Pass | GIF SCREEN |
-| | Enter valid credentials | Error message on wrong credentials | Pass | SCREEN |
-| | Click Login button | Redirects user to home page | Pass | |
+| | Click on the Login link | Open Sign in Modal | Pass | [![Sign in Modal](https://i.gyazo.com/120936924cbf351d80d245ea43ac794e.gif)](https://gyazo.com/120936924cbf351d80d245ea43ac794e) |
+| | Enter valid credentials | Error message on wrong credentials | Pass | ![Wrong Credentials](documentation/testing/def-wrong-sign.png) |
+| | Click Login button | Redirects user to home page and gets vissual confirmation | Pass | [![Login Confirmation](https://i.gyazo.com/315e0e227fb0ca80a63658d2c56954d8.gif)](https://gyazo.com/315e0e227fb0ca80a63658d2c56954d8) |
 | Sign Out | | | | |
-| | Click Logout button | Opens Sign out Modal | Pass |  |
+| | Click Logout button | Opens Sign out Modal | Pass | [![Sign out](https://i.gyazo.com/ff2647a1d752ec830dea64688a791d3c.gif)](https://gyazo.com/ff2647a1d752ec830dea64688a791d3c) |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
 | Create News | | | | |
 | | Click Create news | Opens Create News Modal Only for Signed In users | Pass | SCREEN |
@@ -148,8 +148,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Editing | All changes are made after klicking edit | Pass | SCREEN |
 | | Delete | News posts gets deleted, with all its comments | Pass |  |
 | | Delete Comment | The chosen comment gets deleted | Pass |  |
-
-
 
 
 ## User Story Testing
