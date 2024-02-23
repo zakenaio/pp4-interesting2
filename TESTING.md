@@ -79,28 +79,26 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Home | Popular | Footer | Details | Modal | Modal | Modal |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Desktop 1440p** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetail.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsucc.png) |
+| ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetail.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Macbook 16"** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/macbook1.png) | ![screenshot](documentation/testing/comp/macbook2.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| ![screenshot](documentation/testing/comp/mavbookhome.png) | ![screenshot](documentation/testing/comp/macbookpop.png) | ![screenshot](documentation/testing/comp/macbookfooter.png) | ![screenshot](documentation/testing/comp/macbookdetail.png) | ![screenshot](documentation/testing/comp/macbookcreate.png) | ![screenshot](documentation/testing/comp/macbookpedit.png) | ![screenshot](documentation/testing/comp/macbooksignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Tablet DEV** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/macbook3.png) | ![screenshot](documentation/testing/comp/macbook4.png) | ![screenshot](documentation/testing/comp/desktop5.png) | ![screenshot](documentation/testing/comp/desktop6.png) | ![screenshot](documentation/testing/comp/desktop7.png) |
+| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/tabletdevfooter.png) | ![screenshot](documentation/testing/comp/tabletdevdetail.png) | ![screenshot](documentation/testing/comp/tabletdevcreate.png) | ![screenshot](documentation/testing/comp/tabletdevedit.png) | ![screenshot](documentation/testing/comp/tabletdevsignin.png) |
 | Notes |  |  |  |  |  |  |
 | **Pixel 3 DEV** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/pixel3home.png) | ![screenshot](documentation/testing/comp/pixel3pop.png) | ![screenshot](documentation/testing/comp/pixel3footer.png) | ![screenshot](documentation/testing/comp/pixel1.png) | ![screenshot](documentation/testing/comp/p7p2.png) | ![screenshot](documentation/testing/comp/p7p3.png) | ![screenshot](documentation/testing/comp/p7p4.png) |
+| ![screenshot](documentation/testing/comp/pixel3home.png) | ![screenshot](documentation/testing/comp/pixel3pop.png) | ![screenshot](documentation/testing/comp/pixel3footer.png) | ![screenshot](documentation/testing/comp/pixel3detail.png) | ![screenshot](documentation/testing/comp/pixel3create.png) | ![screenshot](documentation/testing/comp/pixel3edit.png) | ![screenshot](documentation/testing/comp/pixel3signup.png) |
 | Notes |  |  |  |  |  |  |
 | **iPhone X DEV** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/iphonexhome.png) | ![screenshot](documentation/testing/comp/iphonexpop.png) | ![screenshot](documentation/testing/comp/iphonexfooter.png) | ![screenshot](documentation/testing/comp/iphonex1.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
+| ![screenshot](documentation/testing/comp/iphonexhome.png) | ![screenshot](documentation/testing/comp/iphonexpop.png) | ![screenshot](documentation/testing/comp/iphonexfooter.png) | ![screenshot](documentation/testing/comp/iphonexdetail.png) | ![screenshot](documentation/testing/comp/iphonexcreate.png) | ![screenshot](documentation/testing/comp/iphonexedit.png) | ![screenshot](documentation/testing/comp/iphonexsignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Devtools Small**  |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devsmallhome.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) | ![screenshot](documentation/testing/comp/devsmall2.png) | ![screenshot](documentation/testing/comp/devsmall3.png) | ![screenshot](documentation/testing/comp/devsmall4.png) |
+| ![screenshot](documentation/testing/comp/devsmallhome.png) | ![screenshot](documentation/testing/comp/devsmallpop.png) | ![screenshot](documentation/testing/comp/devsmallfooter.png) | ![screenshot](documentation/testing/comp/devsmalldetail.png) | ![screenshot](documentation/testing/comp/devsmallcreate.png) | ![screenshot](documentation/testing/comp/devsmalledit.png) | ![screenshot](documentation/testing/comp/devsmallsignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Devtools Medium** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devmediumhome.png) | ![screenshot](documentation/testing/comp/devmediumpop.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | ![screenshot](documentation/testing/comp/devmed2.png) | ![screenshot](documentation/testing/comp/devmed3.png) | ![screenshot](documentation/testing/comp/devmed4.png) | 
+| ![screenshot](documentation/testing/comp/devmediumhome.png) | ![screenshot](documentation/testing/comp/devmediumpop.png) | ![screenshot](documentation/testing/comp/devmediumfooter.png) | ![screenshot](documentation/testing/comp/devmediumdetail.png) | ![screenshot](documentation/testing/comp/devmediumcreate.png) | ![screenshot](documentation/testing/comp/devmediumedit.png) | ![screenshot](documentation/testing/comp/devmediumsignup.png) | 
 | Notes |  |  |  |  |  |  |
-| **Devtools Large** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/devlargehome.png) | ![screenshot](documentation/testing/comp/devlargepop.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | ![screenshot](documentation/testing/comp/devlarge2.png) | ![screenshot](documentation/testing/comp/devlarge3.png) | ![screenshot](documentation/testing/comp/devlarge4.png) | 
 
 ## Lighthouse Audit
 
@@ -129,6 +127,28 @@ Defensive programming was manually tested with the below user acceptance testing
 | Edit | User can only edit its own posts | If not logged in, no edit button apear. | Logged in, Button apear, only on your posts.| | ![Edit button on users post](documentation/testing/loggededitrestict.png) |
 |  | | | | | |
 
+
+MAYBE JUST USE THE ABOVE! 
+
+| Page | User Action | Expected Result | Pass/Fail | Comments |
+| --- | --- | --- | --- | --- |
+| Home | | | | |
+| | Click on Logo | Redirection to Home page | Pass | |
+| | Click on Home link in navbar | Redirection to Home page | Pass | |
+| Sign Up | | | | |
+| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | |
+| | Confirm email | Redirects user to blank Sign In page | Pass | |
+| Log In | | | | |
+| | Click on the Login link | Redirection to Login page | Pass | |
+| | Enter valid email address | Field will only accept email address format | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | |
+| | Click Login button | Redirects user to home page | Pass | |
+| Log Out | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| repeat for all remaining pages | x | x | x | x |
 
 
 ## User Story Testing
@@ -218,14 +238,11 @@ Any remaining open issues can be tracked [here](https://github.com/zakenaio/pp4-
 
 | Bug | Status |
 | --- | --- |
-| --- | --- |
-
-
-ICON NOT ANIMATED IN CHROMIUM 
+| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/zakenaio/pp4-interesting2/issues/4) | Open |
+| [Python `E501 line too long` (93 > 79 characters)](https://github.com/zakenaio/pp4-interesting2/issues/5) | Open |
 
 ## Unfixed Bugs
 
 | Bug | Status |
 | --- | --- |
-| Using django links in some modals | Noticed that i had hardcoded links in some of my modals, after trying to fix the issue some of my modals broke, curtain faded but no modal was shown, i could not seem to resolve the issue at this point. |
-| User profile | The need for a profile page is huge, so the user can edit their profile image, and information. I did not manage. Got redirect errors, and authentication errors. | 
+| Using django links in some modals | Noticed that i had hardcoded links in some of my modals, after trying to fix the issue some of my modals broke, curtain faded but no modal was shown, i could not seem to resolve the issue at this point. | 
