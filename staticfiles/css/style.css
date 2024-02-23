@@ -3,7 +3,7 @@
 /* BODY */
 body {
     margin: 0px;
-    background-color: #919187;
+    background-color: #c2c2c2;
     color: #2c2c2c;
     font-family: 'Barlow';
 }
@@ -45,7 +45,7 @@ img {
 /* HEADER */
 header {
     height: 99vh;
-    background-image: url(https://images.pexels.com/photos/4906419/pexels-photo-4906419.jpeg);
+    background-image: url(https://images.pexels.com/photos/2317685/pexels-photo-2317685.jpeg);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -94,7 +94,8 @@ hr {
 }
 
 a {
-    color: #f3f3f3;
+    color: #134c57;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -110,15 +111,15 @@ h3 a {
 }
 
 .content-container {
-    background-color: #AAAAA9ff;
+    background-color: #d0cecb;
     margin-bottom: 50px;
     margin-top: -20px;
     border-radius: 20px;
+    z-index: 1000;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    z-index: 1000;
 }
 
 /* COLORS AND ALIGN HERO BASE */
@@ -287,7 +288,7 @@ h3 a {
 
 /* POST FOOTER - SOCIAL */
 .post-footer {
-    background-color: rgb(161, 161, 155);
+    background-color: #c2c2c2;
     display: flex;
     align-items: center;
     height: 50px;
@@ -315,7 +316,7 @@ h3 a {
 }
 
 .comment-icon {
-    color: #f3f3f3;
+    color: #2c2c2c;
 }
 
 .comment-icon:hover {
@@ -323,7 +324,7 @@ h3 a {
     }
 
 .vote-icon {
-    color: #f3f3f3;
+    color: #2c2c2c
 }
 
 .vote-icon:hover {
@@ -358,7 +359,7 @@ animation: pulse 1s infinite;
 .comment-count {
     font-size: .8em;
     font-weight: 400;
-    color: #f3f3f3;
+    color: #2c2c2c;
 }
 
 .vote-count {
@@ -366,12 +367,12 @@ animation: pulse 1s infinite;
     font-weight: 400;
     margin-right: -5px;
     margin-bottom: -6px;
-    color: #f3f3f3;
+    color: #2c2c2c;
 }
 
 /* COMMENTS */
 .post-comments {
-    background-color: #919187ff;
+    background-color: #c2c2c2;
     margin-top: 30px;
     margin-bottom: -15px;
     border-radius: 15px;
@@ -387,7 +388,7 @@ animation: pulse 1s infinite;
 
 .comments-footer {
     margin-top: 20px;
-    background-color: rgb(161, 161, 155);
+    background-color: #c2c2c2;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -406,8 +407,8 @@ input {
 
 /* FOOTER */
 footer {
-    background-color: rgb(59, 59, 59);
-    color: #9b9b9b;
+    background-color: #919191;
+    color: #2c2c2c;
     text-align: center;
 }
 
@@ -426,17 +427,17 @@ footer p {
 footer i {
     font-size: 1em;
     margin-top: 10px;
-    color: #9b9b9b;
+    color: #2c2c2c;
 }
 
 .footer-social i {
     font-size: 1.5em;
     margin: 5px;
-    color: #9b9b9b;
+    color: #2c2c2c;
 }
 
 .footer-social:hover {
-    color: #acad9d;
+    color: #2c2c2c;
 }
 
 .raw-footer {
@@ -446,13 +447,13 @@ footer i {
 
 /* MODALS */
 .modal-content {
-    background-color: rgb(161, 161, 155);
+    background-color: #c2c2c2;
     color: #2c2c2c;
 }
 
 .modal-header {
     border: 0px;
-    background-color: #919187ff;
+    background-color: #919191;
 }
 
 .modal-content h4 {
