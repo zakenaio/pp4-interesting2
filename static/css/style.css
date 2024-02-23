@@ -39,7 +39,7 @@ img {
 
 /* fade to this color */
 .dark-background {
-    background-color: rgba(65, 67, 30, 0.608);
+    background-color: rgba(58, 58, 58, 0.6);
 }
 
 /* HEADER */
@@ -406,8 +406,8 @@ input {
 
 /* FOOTER */
 footer {
-    background-color: rgb(92, 92, 85);
-    color: #2c2c2c;
+    background-color: #3b3b3b;
+    color: #9b9b9b;
     text-align: center;
 }
 
@@ -426,13 +426,13 @@ footer p {
 footer i {
     font-size: 1em;
     margin-top: 10px;
-    color: #2c2c2c;
+    color: #9b9b9b;
 }
 
 .footer-social i {
     font-size: 1.5em;
     margin: 5px;
-    color: #2c2c2c;
+    color: #9b9b9b;
 }
 
 .footer-social:hover {

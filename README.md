@@ -43,8 +43,8 @@ Footer
 - `#2c2c2c` used for primary text.
 - `#f3f3f3` used for headers and links.
 
-- `#5d5c55` used for footer background.
-- `#2c2c2c` used for footer text.
+- `#3b3b3b` used for footer background.
+- `#9b9b9b` used for footer text.
 
 
 Explain colours. 
