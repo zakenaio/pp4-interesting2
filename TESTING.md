@@ -122,33 +122,34 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Funtion | Expectation | Test | Result | Fix | Screenshot |
-| --- | --- | --- | --- | --- | --- |
-| Edit | User can only edit its own posts | If not logged in, no edit button apear. | Logged in, Button apear, only on your posts.| | ![Edit button on users post](documentation/testing/loggededitrestict.png) |
-|  | | | | | |
 
-
-MAYBE JUST USE THE ABOVE! 
-
-| Page | User Action | Expected Result | Pass/Fail | Comments |
+| Page | User Action | Expected Result | Pass/Fail | Visual confirmation |
 | --- | --- | --- | --- | --- |
 | Home | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
 | Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
+| | Click on Sign Up button | Open Sign up Modal | Pass | GIF SCREEN |
 | | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
-| | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
+| | Enter valid password (twice) | Field will only accept password format | Pass | SCREEN |
+| Sign In | | | | |
+| | Click on the Login link | Open Sign in Modal | Pass | GIF SCREEN |
+| | Enter valid credentials | Error message on wrong credentials | Pass | SCREEN |
 | | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| Sign Out | | | | |
+| | Click Logout button | Opens Sign out Modal | Pass |  |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
-| repeat for all remaining pages | x | x | x | x |
+| Create News | | | | |
+| | Click Create news | Opens Create News Modal Only for Signed In users | Pass | SCREEN |
+| | Modal needs fields to be filled  | Redirects user to home page | Pass | SCREEN |
+| | Click Create News  | Creates news post and gives feedback on creation. Redirect to post | Pass | SCREEN |
+| Edit News | | | | |
+| | Click Edit | Edit button shows only on the USERS news posts | Pass | SCREEN |
+| | Editing | All changes are made after klicking edit | Pass | SCREEN |
+| | Delete | News posts gets deleted, with all its comments | Pass |  |
+| | Delete Comment | The chosen comment gets deleted | Pass |  |
+
+
 
 
 ## User Story Testing
