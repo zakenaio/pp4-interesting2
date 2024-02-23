@@ -133,11 +133,11 @@
                         </div>
                     </form>
                     <!-- DELETE -->
-                    <form method="post" action="{% url 'delete_news' slug=post.slug %}" class="d-inline">
+                    <form method="post" action="{% url 'delete_news' slug=post.slug %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
-                    <!-- DELETE -->
+                    <!-- DELETE COMMENT-->
                     <hr>
                     {% endif %}
                     <h5>Comments</h5>

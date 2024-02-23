@@ -37,14 +37,15 @@ Footer
 
 ![Colors](documentation/UX/colors.png)
 
-- `#636363` used for background.
-- `#AAAAA9` used for article background.
+- `#c2c2c2` used for background.
+- `#d0ceb` used for content background.
 
 - `#2c2c2c` used for primary text.
-- `#f3f3f3` used for headers and links.
+- `#f3f3f3` used for header text.
+- `#134c57` used for link text.
 
-- `#3b3b3b` used for footer background.
-- `#9b9b9b` used for footer text.
+- `#919191` used for footer background.
+- `#2c2c2c` used for footer text.
 
 
 Explain colours. 
@@ -231,6 +232,8 @@ This combination aims to create a more engaging and dynamic news experience whil
 - Knowing if you are signed in is important for the user. Some elements change depending on whether you are logged in or not, such as "Sign In/Sign Up" changing to "Sign Out" and the ability to "Create News." However, as a new user, a more straightforward method of knowing your login status might feel more intuitive.
 
 
+[![Image from Gyazo](https://i.gyazo.com/315e0e227fb0ca80a63658d2c56954d8.gif)](https://gyazo.com/315e0e227fb0ca80a63658d2c56954d8)
+
 ### Future Features
 
 - OpenGraph
@@ -269,7 +272,6 @@ This combination aims to create a more engaging and dynamic news experience whil
 - [Gemini](https://gemini.google.com/) Used for spell check, and grammar for README and TESTING.
 - [PyDot](https://github.com/pydot/pydot) Used for creating ERD
 - [ckEditor](https://ckeditor.com/) Used for admin-board and more advanced content creation.
-- [SweetAlert](https://sweetalert.js.org/) Used for crud alerts.
 
 
 ## Database Design
@@ -719,7 +721,7 @@ Sources for help.
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
+| [Pexels- Header image](https://images.pexels.com/photos/2317685/pexels-photo-2317685.jpeg) | entire site | image | favicon on all pages |
 
 ### Acknowledgements
 
