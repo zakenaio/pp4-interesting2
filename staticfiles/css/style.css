@@ -407,7 +407,7 @@ input {
 /* FOOTER */
 footer {
     background-color: rgb(92, 92, 85);
-    color: #37382f;
+    color: #2c2c2c;
     text-align: center;
 }
 
@@ -426,13 +426,13 @@ footer p {
 footer i {
     font-size: 1em;
     margin-top: 10px;
-    color: #414237;
+    color: #2c2c2c;
 }
 
 .footer-social i {
     font-size: 1.5em;
     margin: 5px;
-    color: #414237;
+    color: #2c2c2c;
 }
 
 .footer-social:hover {

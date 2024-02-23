@@ -40,11 +40,11 @@ Footer
 - `#636363` used for background.
 - `#AAAAA9` used for article background.
 
-- `#636363` used for primary text.
+- `#2c2c2c` used for primary text.
 - `#f3f3f3` used for headers and links.
 
 - `#5d5c55` used for footer background.
-- `#37382f` used for footer text.
+- `#2c2c2c` used for footer text.
 
 
 Explain colours. 
