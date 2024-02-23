@@ -169,7 +169,7 @@ Overall, modals provide a good balance between user experience, development effi
 
 This combination aims to create a more engaging and dynamic news experience while remaining accessible to all users.
 
-[![Image from Gyazo](https://i.gyazo.com/5996e2971cb332aed73686cebfe8293f.gif)](https://gyazo.com/5996e2971cb332aed73686cebfe8293f)
+[![Vote Heart Animation](https://i.gyazo.com/2670a41f53f1eda3868ace4217968933.gif)](https://gyazo.com/2670a41f53f1eda3868ace4217968933)
 
 
 ### Existing Features
@@ -180,11 +180,11 @@ This combination aims to create a more engaging and dynamic news experience whil
 
   - A large, bold headline reading **INTERESTING**, with a smaller **tell me more** line underneath, takes center stage to grab the visitor's attention. A bouncing down arrow adds interactivity and movement, further hinting that scrolling down leads to the heart of the fun.
 
-[![Arrow animation](https://i.gyazo.com/2d83f568a96df12d54a5048264917507.gif)](https://gyazo.com/2d83f568a96df12d54a5048264917507)
+[![Arrow animation](https://i.gyazo.com/94159c4146a1654d42d028fcd115fab2.gif)](https://gyazo.com/94159c4146a1654d42d028fcd115fab2)
 
 - **Menu - fade in/out**
 
-[![Menu fade](https://i.gyazo.com/260bbe2e42c8175e400bf93b918e58e4.gif)](https://gyazo.com/260bbe2e42c8175e400bf93b918e58e4)
+[![Menu fade]((https://i.gyazo.com/6da1d042916c83e8dc32542e2b35470e.gif)](https://gyazo.com/6da1d042916c83e8dc32542e2b35470e)
 
   - To avoid being too distracting, the menu has gained the ability to fade in and out based on your position on the screen using JavaScript. The fade-in animation itself is determined in the CSS.
   - [Scroll inspiration](https://stackoverflow.com/questions/23673981/how-to-get-navbar-to-fade-in-and-out#23674172) using variations of different sources, but this whas the one i relied on most.
