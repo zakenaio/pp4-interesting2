@@ -1,8 +1,9 @@
 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.conf import settings
 from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST
 from .forms import CommentForm, NewsPostForm
 from .models import News_Post, Comment
