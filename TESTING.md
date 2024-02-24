@@ -166,7 +166,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Fields need to have content  | A warning shows | Pass | ![Required Fields](documentation/testing/testing-create-required1.png) ![Required Fields](documentation/testing/testing-create-required2.png) |
 | | Click Create News  | Creates news post and gives feedback on creation. Redirect to post | Pass | [![Create and redirect to News](https://i.gyazo.com/704d6e2dfee82f43641f752cd26027f0.gif)](https://gyazo.com/704d6e2dfee82f43641f752cd26027f0) |
 | Edit News | | | | |
-| | Click Edit | Edit button shows only on the Signed in USERS news posts | Pass |  ![Edit Users Post](documentation/testing/testing-edit-users.png) |
+| | User signed in | Edit button shows only on the Signed in USERS news posts | Pass |  ![Edit Users Post](documentation/testing/testing-edit-users.png) |
 | | Editing | All changes are made after clicking edit | Pass | [![Edit users News](https://i.gyazo.com/7e5a4bca2d6213e39c3b3e10404a0554.gif)](https://gyazo.com/7e5a4bca2d6213e39c3b3e10404a0554) |
 | | Delete News | News posts gets deleted, with all its comments | Pass | [![Delete users News](https://i.gyazo.com/85a7990d4bda7c7aa451f975b58759bb.gif)](https://gyazo.com/85a7990d4bda7c7aa451f975b58759bb) |
 | | Delete Comment | The chosen comment gets deleted | Pass | [![Delete comment](https://i.gyazo.com/fe087c934ef08c4b45a9ff2251f389e7.gif)](https://gyazo.com/fe087c934ef08c4b45a9ff2251f389e7) |
