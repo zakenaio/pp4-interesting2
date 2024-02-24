@@ -123,6 +123,24 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 | More of the same | minor issues, some i can not understand. Flags bootstrap elements, but ok score | same cloudinary https issues | issues based on trigging modals, and robots.txt |
 
 
+### Desktop
+| Home | ![screenshot](documentation/testing/lighthouse/lh-desktop-home.png) |  |  |
+| --- | --- | --- | --- |
+| ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-SEO.png) |
+| issues mostly based on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+
+| Popular News | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop.png) |  |  |
+| --- | --- | --- | --- |
+| ![screenshot](documentation/testing/lighthouse/lh-desktop-pop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop-SEO.png) |
+| Same heroku, some minor about using jpg/png and not next gen | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+
+| News Detail | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail.png) |  |  |
+| --- | --- | --- | --- |
+| ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-SEO.png) |
+| More of the same | minor issues, some i can not understand. Flags bootstrap elements, but ok score | same cloudinary https issues | issues based on trigging modals, and robots.txt |
+
+
+
 ## Defensive Programming
 
 Defensive programming was manually tested with the below user acceptance testing:
