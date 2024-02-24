@@ -100,17 +100,27 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 Problem with Lighthouse Audit with cloudinary not using https 
 https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
 https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http-instead-of-https
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
-
-| Home | ![screenshot](documentation/lighthouse/lh-mobile-home.png) |  |  |
+### Mobile
+| Home | ![screenshot](documentation/testing/lighthouse/lh-mobile-home.png) |  |  |
 | --- | --- | --- | --- |
 | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-SEO.png) |
-| issues baseed on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+| issues mostly based on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+
+| Popular News | ![screenshot](documentation/testing/lighthouse/lh-mobile-pop.png) |  |  |
+| --- | --- | --- | --- |
+| ![screenshot](documentation/testing/lighthouse/lh-mobile-pop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-pop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-pop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-pop-SEO.png) |
+| Same heroku, some minor about using jpg/png and not next gen | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+
+| News Detail | ![screenshot](documentation/testing/lighthouse/lh-mobile-detail.png) |  |  |
+| --- | --- | --- | --- |
+| ![screenshot](documentation/testing/lighthouse/lh-mobile-detail-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-detail-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-detail-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-detail-SEO.png) |
+| More of the same | minor issues, some i can not understand. Flags bootstrap elements, but ok score | same cloudinary https issues | issues based on trigging modals, and robots.txt |
 
 
 ## Defensive Programming
