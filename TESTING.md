@@ -109,7 +109,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Home | ![screenshot](documentation/lighthouse/lh-mobile-home.png) |  |  |
 | --- | --- | --- | --- |
-| ![screenshot](documentation/lighthouse/lh-mobile-home-perfomance.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-access.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-bestpract.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-SEO.png) |
+| ![screenshot](documentation/testing/lighthouse/lh-mobile-home-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-home-SEO.png) |
 | issues baseed on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
 
 
