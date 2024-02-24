@@ -83,7 +83,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | ![screenshot](documentation/testing/comp/mavbookhome.png) | ![screenshot](documentation/testing/comp/macbookpop.png) | ![screenshot](documentation/testing/comp/macbookfooter.png) | ![screenshot](documentation/testing/comp/macbookdetail.png) | ![screenshot](documentation/testing/comp/macbookcreate.png) | ![screenshot](documentation/testing/comp/macbookpedit.png) | ![screenshot](documentation/testing/comp/macbooksignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Tablet DEV** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/tabletdevfooter.png) | ![screenshot](documentation/testing/comp/tabletdevdetail.png) | ![screenshot](documentation/testing/comp/tabletdevcreate.png) | ![screenshot](documentation/testing/comp/tabletdevedit.png) | ![screenshot](documentation/testing/comp/tabletdevsignin.png) |
+| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/tabletdevfooter.png) | ![screenshot](documentation/testing/comp/tabletdevdetail.png) | ![screenshot](documentation/testing/comp/tabletdevcreate.png) | ![screenshot](documentation/testing/comp/tabletdevedit.png) | ![screenshot](documentation/testing/comp/tabletdevsignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Pixel 3 DEV** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/pixel3home.png) | ![screenshot](documentation/testing/comp/pixel3pop.png) | ![screenshot](documentation/testing/comp/pixel3footer.png) | ![screenshot](documentation/testing/comp/pixel3detail.png) | ![screenshot](documentation/testing/comp/pixel3create.png) | ![screenshot](documentation/testing/comp/pixel3edit.png) | ![screenshot](documentation/testing/comp/pixel3signup.png) |
@@ -126,7 +126,7 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 ### Desktop
 | Home | ![screenshot](documentation/testing/lighthouse/lh-desktop-home.png) |  |  |
 | --- | --- | --- | --- |
-| ![screenshot](documentation/testing/lighthouse/lh-desktop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-SEO.png) |
+| ![screenshot](documentation/testing/lighthouse/lh-desktop-home-performance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-home-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-home-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-home-SEO.png) |
 | issues mostly based on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
 
 | Popular News | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop.png) |  |  |
@@ -136,7 +136,7 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 
 | News Detail | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail.png) |  |  |
 | --- | --- | --- | --- |
-| ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-SEO.png) |
+| ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-performance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-detail-SEO.png) |
 | More of the same | minor issues, some i can not understand. Flags bootstrap elements, but ok score | same cloudinary https issues | issues based on trigging modals, and robots.txt |
 
 
