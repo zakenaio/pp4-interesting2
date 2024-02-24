@@ -126,7 +126,7 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 ### Desktop
 | Home | ![screenshot](documentation/testing/lighthouse/lh-desktop-home.png) |  |  |
 | --- | --- | --- | --- |
-| ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-mobile-desktop-SEO.png) |
+| ![screenshot](documentation/testing/lighthouse/lh-desktop-perfomance.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-access.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-bestpract.png) | ![screenshot](documentation/testing/lighthouse/lh-desktop-SEO.png) |
 | issues mostly based on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
 
 | Popular News | ![screenshot](documentation/testing/lighthouse/lh-desktop-pop.png) |  |  |
