@@ -446,6 +446,10 @@ footer i {
 }
 
 /* MODALS */
+.modal {
+    z-index: 2000;
+}
+
 .modal-content {
     background-color: #c2c2c2;
     color: #2c2c2c;

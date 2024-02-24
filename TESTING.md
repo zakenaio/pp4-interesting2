@@ -145,7 +145,6 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-
 | Page | User Action | Expected Result | Pass/Fail | Visual confirmation |
 | --- | --- | --- | --- | --- |
 | Home | | | | |
@@ -160,12 +159,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter valid credentials | Error message on wrong credentials | Pass | ![Wrong Credentials](documentation/testing/def-wrong-sign.png) |
 | | Click Login button | Redirects user to home page and gets vissual confirmation | Pass | [![Login Confirmation](https://i.gyazo.com/315e0e227fb0ca80a63658d2c56954d8.gif)](https://gyazo.com/315e0e227fb0ca80a63658d2c56954d8) |
 | Sign Out | | | | |
-| | Click Logout button | Opens Sign out Modal | Pass | [![Sign out](https://i.gyazo.com/ff2647a1d752ec830dea64688a791d3c.gif)](https://gyazo.com/ff2647a1d752ec830dea64688a791d3c) |
+| | Click Logout button | Opens Sign out Modal, and gives visual feed back. | Pass | [![Sign out](https://i.gyazo.com/ff2647a1d752ec830dea64688a791d3c.gif)](https://gyazo.com/ff2647a1d752ec830dea64688a791d3c) |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
 | Create News | | | | |
-| | Click Create news | Opens Create News Modal Only for Signed In users | Pass | SCREEN |
-| | Modal needs fields to be filled  | Redirects user to home page | Pass | SCREEN |
-| | Click Create News  | Creates news post and gives feedback on creation. Redirect to post | Pass | SCREEN |
+| | Click Create news | Opens Create News Modal Only for Signed In users | Pass | [![Open Create news](https://i.gyazo.com/ee6380cac65869b3d1fdc3564ff35c48.gif)](https://gyazo.com/ee6380cac65869b3d1fdc3564ff35c48) |
+| | Fields need to have content  | A warning shows | Pass | ![Required Fields](documentation/testing/testing-create-required1.png) ![Required Fields](documentation/testing/testing-create-required2.png) |
+| | Click Create News  | Creates news post and gives feedback on creation. Redirect to post | Pass | [![Create and redirect to News](https://i.gyazo.com/704d6e2dfee82f43641f752cd26027f0.gif)](https://gyazo.com/704d6e2dfee82f43641f752cd26027f0) |
 | Edit News | | | | |
 | | Click Edit | Edit button shows only on the USERS news posts | Pass | SCREEN |
 | | Editing | All changes are made after klicking edit | Pass | SCREEN |
