@@ -42,23 +42,21 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ### Python
 
-`# noqa` = **NO Quality Assurance**
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
+`# noqa` = **NO Quality Assurance** used for some of the longer lines, to not break functionality.
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | GitHub URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| interesting/admin.py | URL | ![screenshot](documentation/testing/pep8-asgi.png) |  |
 | interesting/settings.py | URL | ![screenshot](documentation/testing/pep8-settings.png) | used # noqa for long lines on five places, all regarding long lines as secret-keys and such. |
 | interesting/urls.py | URL | ![screenshot](documentation/testing/pep8-urls2.png) | used # noqa for long lines once.  |
 | news/admin.py | URL | ![screenshot](documentation/testing/pep8-admin.png) |  |
 | news/apps.py | URL | ![screenshot](documentation/testing/pep8-apps.png) |  |
 | news/context_processors.py | URL | ![screenshot](documentation/testing/pep8-cont.png) |  |
-| news/forms.py | URL | ![screenshot](documentation/testing/pep8-forms.png) |  |
-| news/models.py | URL | ![screenshot](documentation/testing/pep8-models.png) |  |
-| news/urls.py | URL | ![screenshot](documentation/testing/pep8-urls.png) |  |
+| news/forms.py | URL | ![screenshot](documentation/testing/pep8-forms.png) | used # noqa for long lines once.  |
+| news/models.py | URL | ![screenshot](documentation/testing/pep8-models.png) | used # noqa for long lines twice. Broke some of the functionality if i tried to split the lines. |
+| news/urls.py | URL | ![screenshot](documentation/testing/pep8-urls.png) | used # noqa for long lines once. |
+| news/views.py | URL | ![screenshot](documentation/testing/pep8-views.png) | used # noqa for long lines twice |
 
 ## Browser Compatibility
 
@@ -85,7 +83,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | ![screenshot](documentation/testing/comp/mavbookhome.png) | ![screenshot](documentation/testing/comp/macbookpop.png) | ![screenshot](documentation/testing/comp/macbookfooter.png) | ![screenshot](documentation/testing/comp/macbookdetail.png) | ![screenshot](documentation/testing/comp/macbookcreate.png) | ![screenshot](documentation/testing/comp/macbookpedit.png) | ![screenshot](documentation/testing/comp/macbooksignup.png) |
 | Notes |  |  |  |  |  |  |
 | **Tablet DEV** |  |  |  |  |  |  |
-| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/tabletdevfooter.png) | ![screenshot](documentation/testing/comp/tabletdevdetail.png) | ![screenshot](documentation/testing/comp/tabletdevcreate.png) | ![screenshot](documentation/testing/comp/tabletdevedit.png) | ![screenshot](documentation/testing/comp/tabletdevsignup.png) |
+| ![screenshot](documentation/testing/comp/tabletdevhome.png) | ![screenshot](documentation/testing/comp/tabletdevpop.png) | ![screenshot](documentation/testing/comp/tabletdevfooter.png) | ![screenshot](documentation/testing/comp/tabletdevdetail.png) | ![screenshot](documentation/testing/comp/tabletdevcreate.png) | ![screenshot](documentation/testing/comp/tabletdevedit.png) | ![screenshot](documentation/testing/comp/tabletdevsignin.png) |
 | Notes |  |  |  |  |  |  |
 | **Pixel 3 DEV** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/pixel3home.png) | ![screenshot](documentation/testing/comp/pixel3pop.png) | ![screenshot](documentation/testing/comp/pixel3footer.png) | ![screenshot](documentation/testing/comp/pixel3detail.png) | ![screenshot](documentation/testing/comp/pixel3create.png) | ![screenshot](documentation/testing/comp/pixel3edit.png) | ![screenshot](documentation/testing/comp/pixel3signup.png) |
@@ -102,8 +100,6 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-SCREENS OF EVERY TEST! 
-TEST EVERY PAGE! 
 
 Problem with Lighthouse Audit with cloudinary not using https 
 https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
@@ -111,12 +107,11 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-| Page | Mobile | Desktop | Notes |
+| Home | ![screenshot](documentation/lighthouse/lh-mobile-home.png) |  |  |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| ![screenshot](documentation/lighthouse/lh-mobile-home-perfomance.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-access.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-bestpract.png) | ![screenshot](documentation/lighthouse/lh-mobile-home-SEO.png) |
+| issues baseed on heroku | minor issues | issues based on cloudinary | issues based on trigging modals, and robots.txt |
+
 
 ## Defensive Programming
 
@@ -186,6 +181,10 @@ Vote system test.
 
 During the development i encountered several bugs and problems, during development i seldome remember to take a screenshot, I just try to solve it, so if its just frontend glitches, or backend. 
 
+![Edit Save and Delete](documentation/testing/edit-news-edit.png) 
+
+Could not get the buttons to be next to each other. Could probably use more divs, but I feel there must be a better way Im missing. 
+
 ![Package errors](documentation/testing/test-cloudinary-error.png) 
 
 I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
@@ -199,12 +198,6 @@ Make sure you do your js the right way!
 The function to prepopulate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
 The differance between using {%  or {{ was something i apparently found harder than i first thoght. 
 This was also triggered by puting for loops and endfor in the wrong div.
-
-
-
-
-
-
 
 ### GitHub **Issues**
 
