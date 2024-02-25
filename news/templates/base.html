@@ -48,6 +48,12 @@
 
                 <ul class="d-flex navbar-nav">
 
+                    {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a href="{% url 'admin:index' %}" class="nav-link">Admin panel</a>
+                    </li>
+                    {% endif %}
+
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
