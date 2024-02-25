@@ -3,7 +3,6 @@
 Return back to the [README.md](README.md) file.
 
 
-
 ## Code Validation
 
 ### HTML
@@ -53,6 +52,7 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | news/urls.py | URL | ![screenshot](documentation/testing/pep8-urls.png) | used # noqa for long lines once. |
 | news/views.py | URL | ![screenshot](documentation/testing/pep8-views.png) | used # noqa for long lines twice |
 
+
 ## Browser Compatibility
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
@@ -80,6 +80,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 |  | ![FireFox Home](documentation/testing/browsers/fflinuxhome.png) | ![FireFox Popular](documentation/testing/browsers/fflinuxpop.png) | ![FireFox Detail](documentation/testing/browsers/fflinuxdetail.png) |  |
 | Signed out - Sign up | Sign In | Sign in - Sign out | Create | Edit |
 | ![FireFox Sign Up Modal](documentation/testing/browsers/fflinuxup.png) | ![FireFox Sign in  Modal](documentation/testing/browsers/fflinuxin.png) | ![FireFox Sign out Modal](documentation/testing/browsers/fflinuxout.png) | ![FireFox Create Modal](documentation/testing/browsers/fflinuxcreate.png) | ![FireFox Edit Modal](documentation/testing/browsers/fflinuxedit.png) |
+
 
 ## Responsiveness
 
@@ -109,6 +110,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | ![screenshot](documentation/testing/comp/devmediumhome.png) | ![screenshot](documentation/testing/comp/devmediumpop.png) | ![screenshot](documentation/testing/comp/devmediumfooter.png) | ![screenshot](documentation/testing/comp/devmediumdetail.png) | ![screenshot](documentation/testing/comp/devmediumcreate.png) | ![screenshot](documentation/testing/comp/devmediumedit.png) | ![screenshot](documentation/testing/comp/devmediumsignup.png) | 
 | Notes |  |  |  |  |  |  |
 
+
 ## Lighthouse Audit
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
@@ -116,6 +118,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 Problem with Lighthouse Audit with cloudinary not using https 
 https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
 https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http-instead-of-https
+
 
 ### Mobile
 | Home | ![screenshot](documentation/testing/lighthouse/lh-mobile-home.png) |  |  |
@@ -151,7 +154,6 @@ https://community.cloudinary.com/discussion/484/my-urls-are-returned-in-the-http
 | More of the same | minor issues, some i can not understand. Flags bootstrap elements, but ok score | same cloudinary https issues | issues based on trigging modals, and robots.txt |
 
 
-
 ## Defensive Programming
 
 Defensive programming was manually tested with the below user acceptance testing:
@@ -182,22 +184,23 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Delete News | News posts gets deleted, with all its comments | Pass | [![Delete users News](https://i.gyazo.com/85a7990d4bda7c7aa451f975b58759bb.gif)](https://gyazo.com/85a7990d4bda7c7aa451f975b58759bb) |
 | | Delete Comment | The chosen comment gets deleted | Pass | [![Delete comment](https://i.gyazo.com/fe087c934ef08c4b45a9ff2251f389e7.gif)](https://gyazo.com/fe087c934ef08c4b45a9ff2251f389e7) |
 
+
 ## User Story Testing
 
 But, this is the same as i have done fiftyfive times now? This IS the site, everything i have tested is THIS?!?! 
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to create and account, so that I can upload my own news. | ![screenshot](documentation/feature01.png) |
+| As a new site user, I would like to not create an account, so that I can but still see news. | ![screenshot](documentation/feature02.png) |
+| As a new site user, I would like to vote on news, so that I can show my support. | ![screenshot](documentation/feature03.png) |
+| As a returning site user, I would like to like to login, so that I can remove my news. | ![screenshot](documentation/feature04.png) |
+| As a returning site user, I would like to like to login, so that I can edit my news. | ![screenshot](documentation/feature05.png) |
+| As a returning site user, I would like to like to login, so that I can remove comments on my news. | ![screenshot](documentation/feature06.png) |
+| As a site administrator, I should be able to to login, so that I can edit all news. | ![screenshot](documentation/feature07.png) |
+| As a site administrator, I should be able to to login, so that I can create profiles. | ![screenshot](documentation/feature08.png) |
+| As a site administrator, I should be able to to login, so that I can remove users. | ![screenshot](documentation/feature09.png) |
+| As a site administrator, I should be able to to login, so that I can remove comments. | ![screenshot](documentation/feature09.png) |
 
 
 ## Database tests 
@@ -217,6 +220,7 @@ Vote system test.
 Test of forms to database.
 
 ![Form errors](documentation/testing/test-form-error.png)
+
 
 ## Bugs
 
@@ -240,40 +244,3 @@ But it behaves like it should upon scrolling.
 The function to pre populate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
 The difference between using {%  or {{ was something I apparently found harder than I first thought. 
 This was also triggered by puting for loops and endfor in the wrong div.
-
-### GitHub **Issues**
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/zakenaio/pp4-interesting2/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-
-**Fixed Bugs**
-
-All previously closed/fixed bugs can be tracked [here](https://github.com/zakenaio/pp4-interesting2/issues?q=is%3Aissue+is%3Aclosed).
-
-| Bug | Status |
-| --- | --- |
-
-
-Any remaining open issues can be tracked [here](https://github.com/zakenaio/pp4-interesting2/issues).
-
-| Bug | Status |
-| --- | --- |
-
-
-## Unfixed Bugs
-
-| Bug | Status |
-| --- | --- |
-| Using django links in some modals | Noticed that i had hardcoded links in some of my modals, after trying to fix the issue some of my modals broke, curtain faded but no modal was shown, i could not seem to resolve the issue at this point. | 
