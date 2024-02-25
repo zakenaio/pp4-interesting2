@@ -147,10 +147,12 @@
                             data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>.
                     </p>
                     <ul class='errorlist'></ul>
+
+                    <form method="post" action="{% url 'account_signup' %}" id="signupForm">
+                        {% csrf_token %}
+
                     <div class="row">
                         <div class="col-4 text-end">
-                            <form method="post" action="{% url 'account_signup' %}" id="signupForm">
-                                {% csrf_token %}
                                 <p>
                                     <label for="id_username">Username:</label>
                                 </p>
