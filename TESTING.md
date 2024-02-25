@@ -85,7 +85,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Home | Popular | Footer | Details | Modal | Modal | Modal |
+| Home | Popular | Footer | Details | Create | Edit | Sign up |
 | --- | --- | --- | --- | --- | --- | --- |
 | **Desktop 1440p** |  |  |  |  |  |  |
 | ![screenshot](documentation/testing/comp/desktophome.png) | ![screenshot](documentation/testing/comp/desktoppop.png) | ![screenshot](documentation/testing/comp/desktopfooter.png) | ![screenshot](documentation/testing/comp/desktopdetail.png) | ![screenshot](documentation/testing/comp/desktopcreate.png) | ![screenshot](documentation/testing/comp/desktopedit.png) | ![screenshot](documentation/testing/comp/desktopsignup.png) |
@@ -214,6 +214,10 @@ Vote system test.
 
 ![Vote systemt](documentation/testing/test-vote-post.png) 
 
+Test of forms to database.
+
+![Form errors](documentation/testing/test-form-error.png)
+
 ## Bugs
 
 During the development i encountered several bugs and problems, during development i seldome remember to take a screenshot, I just try to solve it, so if its just frontend glitches, or backend. 
@@ -226,14 +230,15 @@ Could not get the buttons to be next to each other. Could probably use more divs
 
 I had way to many of these, things where installed, i could use them. But i just was not able to use it in my venv, reboots, new venv, nothing worked. But after an update of VScode solved it. Note to self, always update! 
 
-![Form errors](documentation/testing/test-form-error.png)
+![Nav Fade](documentation/testing/test-bug-menu.png)
 
-Make sure you do your js the right way!
+I wanted the menu to be transparent when you enter the site, but for some reason i still shows. 
+But it behaves like it should upon scrolling. 
 
 ![Edit errors](documentation/testing/test-form-input.png) 
 
 The function to pre populate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
-The differance between using {%  or {{ was something i apparently found harder than i first thoght. 
+The difference between using {%  or {{ was something I apparently found harder than I first thought. 
 This was also triggered by puting for loops and endfor in the wrong div.
 
 ### GitHub **Issues**
