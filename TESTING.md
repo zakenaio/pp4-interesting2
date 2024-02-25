@@ -63,7 +63,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Signed out - Sign up | Sign In | Sign in - Sign out | Create | Edit |
 | ![Edge Win Sign Up Modal](documentation/testing/browsers/edgewinup.png) | ![Edge Win Sign in  Modal](documentation/testing/browsers/edgewinin.png) | ![Edge Win Sign out Modal](documentation/testing/browsers/edgewinout.png) | ![Edge win Create Modal](documentation/testing/browsers/edgewincreate.png) | ![Edge win Edit Modal](documentation/testing/browsers/edgewinedit.png) |
 
-| Edge Windows | Home | Popular News | Detail |  |
+| Brave Windows | Home | Popular News | Detail |  |
 | --- | --- | --- | --- | --- |
 |  | ![Brave Win Home](documentation/testing/browsers/bravewinhome.png) | ![Brave Win Popular](documentation/testing/browsers/bravewinpop.png) | ![Brave Win Detail](documentation/testing/browsers/bravewindetail.png) |  |
 | Signed out - Sign up | Sign In | Sign in - Sign out | Create | Edit |
