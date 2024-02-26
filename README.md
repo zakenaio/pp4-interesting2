@@ -76,7 +76,6 @@ Explain colours.
 ### Site Admin
 
 - As a site administrator, I should be able to login, so that I can edit all news.
-- As a site administrator, I should be able to login, so that I can create profiles.
 - As a site administrator, I should be able to login, so that I can remove comments.
 
 ## Wireframes

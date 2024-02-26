@@ -187,20 +187,16 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-But, this is the same as i have done fiftyfive times now? This IS the site, everything i have tested is THIS?!?! 
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to create and account, so that I can upload my own news. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to not create an account, so that I can but still see news. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to vote on news, so that I can show my support. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to like to login, so that I can remove my news. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to like to login, so that I can edit my news. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to like to login, so that I can remove comments on my news. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to to login, so that I can edit all news. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to to login, so that I can create profiles. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to to login, so that I can remove users. | ![screenshot](documentation/feature09.png) |
-| As a site administrator, I should be able to to login, so that I can remove comments. | ![screenshot](documentation/feature09.png) |
+| As a new site user, I would like to create and account, so that I can upload my own news. | ![Create account](documentation/UX/ux-modal-signup.png) |
+| As a new site user, I would like to not create an account, so that I can but still see news. | ![See news not signed in](documentation/testing/user-see-news.png) |
+| As a new site user, I would like to vote on news, so that I can show my support. | [![User story VOTE](https://i.gyazo.com/2670a41f53f1eda3868ace4217968933.gif)](https://gyazo.com/2670a41f53f1eda3868ace4217968933) |
+| As a returning site user, I would like to like to login, so that I can remove my news. | [![Delete users News](https://i.gyazo.com/85a7990d4bda7c7aa451f975b58759bb.gif)](https://gyazo.com/85a7990d4bda7c7aa451f975b58759bb) |
+| As a returning site user, I would like to like to login, so that I can edit my news. | [![Edit users News](https://i.gyazo.com/7e5a4bca2d6213e39c3b3e10404a0554.gif)](https://gyazo.com/7e5a4bca2d6213e39c3b3e10404a0554) |
+| As a returning site user, I would like to like to login, so that I can remove comments on my news. | [![User Delete comment](https://i.gyazo.com/fe087c934ef08c4b45a9ff2251f389e7.gif)](https://gyazo.com/fe087c934ef08c4b45a9ff2251f389e7) |
+| As a site administrator, I should be able to to login, so that I can edit all news. | ![Admin see edit on all posts](documentation/testing/user-admin-edit-all.png) |
+| As a site administrator, I should be able to to login, so that I can remove comments. | [![Admin remove comments ](https://i.gyazo.com/a7f0f6475b52094a87e016773b51ac7a.gif)](https://gyazo.com/a7f0f6475b52094a87e016773b51ac7a) |
 
 
 ## Database tests 
@@ -244,3 +240,7 @@ But it behaves like it should upon scrolling.
 The function to pre populate the edit Modal played tricks on me on several occations. Way to often it was just I who had placed a csrf_token wrong, or used the wrong post_form.as_p. 
 The difference between using {%  or {{ was something I apparently found harder than I first thought. 
 This was also triggered by puting for loops and endfor in the wrong div.
+
+![Details Validation](documentation/testing/valid-html-detail.png)
+
+The HTML validation-bug that happens on all pages are related to django, ckedit and how it handles .as_p Only way for me to fix it, would be to create the entire form. 
