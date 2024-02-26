@@ -244,3 +244,6 @@ This was also triggered by puting for loops and endfor in the wrong div.
 ![Details Validation](documentation/testing/valid-html-detail.png)
 
 The HTML validation-bug that happens on all pages are related to django, ckedit and how it handles .as_p Only way for me to fix it, would be to create the entire form. 
+
+FAVICON Animation.
+In chromium browsers, chrome, brave, edge. The favicon is not animated, it shows but static. 
