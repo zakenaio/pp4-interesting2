@@ -143,7 +143,7 @@ News Detail
   - ![screenshot](documentation/wireframes/wire-desktop-detail.png)
 
 Modal Placement
-  - ![screenshot](documentation/wireframes/wire-tesktop-mod.png)
+  - ![screenshot](documentation/wireframes/wire-desktop-mod.png)
 
 </details>
 
