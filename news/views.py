@@ -62,7 +62,7 @@ def create_news(request):
 @login_required
 def edit_news(request, slug):
     post = get_object_or_404(News_Post, slug=slug)
-    if post.author != request.user:
+    if request.user != post.author and not request.user.is_superuser:
         messages.error(request, 'Access denied, this is not your news post.')
         return redirect('news_details', slug=slug)
 
@@ -81,7 +81,7 @@ def edit_news(request, slug):
 @login_required
 def delete_news(request, slug):
     post = get_object_or_404(News_Post, slug=slug)
-    if post.author != request.user:
+    if request.user != post.author and not request.user.is_superuser:
         messages.error(request, 'Access denied, this is not your news post.')
         return redirect('news_details', slug=slug)
 
